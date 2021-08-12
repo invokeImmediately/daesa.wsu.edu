@@ -4,7 +4,7 @@
 ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
 FOR THE DAESA WEBSITE
 ---------------------
-@version 1.1.0
+@version 1.1.1
 @author Daniel Rieck
   [daniel.rieck@wsu.edu]
   (https://github.com/invokeImmediately)
@@ -264,19 +264,6 @@ FOR THE DAESA WEBSITE
  **************************************/
 .column #daesa-star-issue a {
   text-decoration: none !important;
-}
-
-/*!*************************************
- * SPINE NAVIGATION MENU FIX
- * Visually show which menu items in the spine can be expanded; the default design provides no visual indicator.
- * @author Daniel Rieck
- **************************************/
-#spine nav li.parent>a:not(:hover):after {
-  display:block;
-}
-
-#spine nav li.parent:not(.opened)>a:not(:hover):after {
-  color:rgba(117, 117, 117, 0.5);
 }
 
 /*!*************************************
