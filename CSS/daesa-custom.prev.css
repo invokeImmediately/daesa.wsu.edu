@@ -1,4 +1,4 @@
-﻿@import  'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+﻿@import  "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 
 /*! ================================================================================================
  *  █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
@@ -15,7 +15,7 @@
  *
  *  Please refer to the linked GitHub project for fully documented, precompiled source code.
  *
- *  @version 1.1.0-rc0.1.3
+ *  @version 1.1.0-rc0.3.4
  *
  *  @link https://github.com/invokeImmediately/WSU-DAESA-CSS
  *  @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
@@ -6115,6 +6115,86 @@ div.auto-scroller ul li {
 	background-color: #f3e0e4;
 }
 
+.autumn-back {
+	background-color: #ff6727;
+}
+
+.autumn-text {
+	color: #ff6727;
+}
+
+.autumn-light-back {
+	background-color: #fff7f4;
+}
+
+.autumn-light-text {
+	color: #fff7f4;
+}
+
+.goldfinch-back {
+	background-color: #f3e700;
+}
+
+.goldfinch-text {
+	color: #f3e700;
+}
+
+.goldfinch-light-back {
+	background-color: #fffef1;
+}
+
+.goldfinch-light-text {
+	color: #fffef1;
+}
+
+.vineyard-back {
+	background-color: #aadc24;
+}
+
+.vineyard-text {
+	color: #aadc24;
+}
+
+.vineyard-light-back {
+	background-color: #f7fcea;
+}
+
+.vineyard-light-text {
+	color: #f7fcea;
+}
+
+.pacific-sky-back {
+	background-color: #5bc3f5;
+}
+
+.pacific-sky-text {
+	color: #5bc3f5;
+}
+
+.pacific-sky-light-back {
+	background-color: #f3fbfe;
+}
+
+.pacific-sky-light-text {
+	color: #f3fbfe;
+}
+
+.midnight-back {
+	background-color: #1d418e;
+}
+
+.midnight-text {
+	color: #1d418e;
+}
+
+.midnight-light-back {
+	background-color: #fafbfe;
+}
+
+.midnight-light-text {
+	color: #fafbfe;
+}
+
 /*! ================================================================================================
 *** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌  ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
 *** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌  ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
@@ -7805,7 +7885,6 @@ ul .more-news__list-entry:not(:first-child) {
 /*! ================================================================================================
  *  ▐▀▄▀▌█▀▀▀ █▀▀▄ ▀█▀ ▄▀▀▄   ▄▀▀▄ █  █ █▀▀▀ █▀▀▄ ▀█▀ █▀▀▀ ▄▀▀▀
  *  █ ▀ ▌█▀▀  █  █  █  █▄▄█   █  █ █  █ █▀▀  █▄▄▀  █  █▀▀  ▀▀▀█
-
  *  █   ▀▀▀▀▀ ▀▀▀  ▀▀▀ █  ▀    ▀█▄  ▀▀  ▀▀▀▀ ▀  ▀▄▀▀▀ ▀▀▀▀ ▀▀▀
  *  ================================================================================================
  *  Media queries built from precompiled CSS written in the Less language extension of CSS. Queries
