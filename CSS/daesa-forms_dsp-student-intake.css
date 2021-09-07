@@ -11,7 +11,7 @@
  * 
  * Responsive design, layout, and branding tweaks to the UMarCom's default theme for web apps.
  *
- * @version 1.0.0-alpha
+ * @version 1.1.1
  *
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  * @link https://github.com/invokeImmediately/daesa.wsu.edu/blob/master/CSS/daesa-forms_dsp-student-
@@ -37,7 +37,7 @@
  *«*/
 
 .row.single .column {
-  width:  100%;
+    width: 100%;
 }
 
 /*!***»******************************************
@@ -45,50 +45,59 @@
  *«*/
 
 html {
-  background-color: #3b4042;
+    background-color: #3b4042;
 }
 
 #binder {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
+}
+
+#MainContent_tbResumeOrCv {
+    min-height: 370px;
+}
+
+#MainContent_fuDSP {
+ margin-bottom: 2rem;
 }
 
 /*!***»******************************************
  * §3: Responsive form layout
  *«*/
 
-form .column table {
-  display: block !important;
-  overflow-x: scroll;
-  position: relative;
+@media only screen and (max-width: 693px) {
+    form .column > table {
+        display: block !important;
+        overflow-x: scroll;
+        position: relative;
+    }
+
+    .row.guttered {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    form .column table {
+        padding-bottom: 2.5em;
+        padding-top: 2.5em;
+    }
+
+    form .column > table:before {
+        content: "←Scroll→";
+        color: #ccc;
+        position: absolute;
+        left: calc( 541px / 2 );
+        transform: translateX(-50% );
+    }
+
+    form .column > table:before {
+        top: .5em;
+    }
 }
 
-@media only screen and (max-width: 693px) {
-  .row.guttered {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  form .column table {
-    padding-bottom: 2.5em;
-    padding-top: 2.5em;
-  }
-
-  form .column table:before,
-  form .column table:after {
-    content: "«===»";
-    color: #ccc;
-    position:  absolute;
-    left: calc( 541px / 2 );
-    transform: translateX(-50% );
-  }
-
-  form .column table:before {
-    top: .5em;
-  }
-
-  form .column table:after {
-    bottom: .5em;
-  }
+@media only screen and (max-width: 580px) {
+    #MainContent_tbResumeOrCv {
+        min-height: 570px;
+    }
 }
 
 /*!***»******************************************
@@ -99,12 +108,12 @@ form .column button:focus,
 form .column input:focus,
 form .column select:focus,
 form .column textarea:focus {
-  outline: 2px solid #5bc3f5;
+    outline: 2px solid #5bc3f5;
 }
 
 form .column button + span,
 form .column input + span,
 form .column select + span,
 form .column textarea + span {
-  color: #eee !important;
+    color: #ee0000 !important;
 }
