@@ -7,7 +7,7 @@
  *   the WSUWP website of the Division of Academic Engagement and Student Achievement (DAESA) at
  *   Washington State University (WSU).
  *
- * @version 1.0.2
+ * @version 1.0.3
  *
  * @link https://github.com/invokeImmediately/daesa.wsu.edu/blob/master/gulpfile.js
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
@@ -85,7 +85,7 @@ function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
 			'./WSU-DAESA-JS/jQuery.daesa-custom.js',
-			'./WSU-DAESA-JS/jQuery.oue-animate.js',
+      './WSU-DAESA-JS/jQuery.DaesaAccordions.js',
 			'./WSU-DAESA-JS/jQuery.cookieObjs.js',
 			'./WSU-DAESA-JS/jQuery.forms.js',
 			'../jQuery.AreYouSure/jquery.are-you-sure.js',
@@ -94,10 +94,9 @@ function getJsBuildSettings() {
 			'./WSU-DAESA-JS/jQuery.qTip.js',
 			'./WSU-DAESA-JS/jQuery.css-data.js',
 			'./WSU-DAESA-JS/jQuery.textResize.js',
-			'./WSU-DAESA-JS/jQuery.masonry-custom.js',
 			'./JS/oue-custom.js'
 		],
-		commentNeedle: /^(\/\*)(?!!)/g,
+		commentNeedle: /^(\/\*)(?!!)(?!-)/g,
 		compiledJsFileName: 'oue-build.js',
 		destFolder: './JS/',
 		minJsFileExtension: '.min.js',
