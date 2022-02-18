@@ -23,7 +23,8 @@
   "homepage": "https://github.com/invokeImmediately/oue.wsu.edu#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-clean-css": "^3.4.1",
+    "gulp-append-prepend": "^1.0.9",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-extname": "^0.2.2",
     "gulp-group-css-media-queries": "^1.2.0",
