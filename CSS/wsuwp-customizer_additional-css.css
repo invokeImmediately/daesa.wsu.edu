@@ -1,0 +1,409 @@
+/*!*************************************
+█▀▀▀▐▄ ▄▌▐▀█▀▌█▀▀▄ ▄▀▀▄   ▄▀▀▀ ▄▀▀▀ ▄▀▀▀
+█▀▀   █    █  █▄▄▀ █▄▄█   █    ▀▀▀█ ▀▀▀█
+▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
+FOR THE DAESA WEBSITE
+---------------------
+@version 1.1.1
+@author Daniel Rieck
+  [daniel.rieck@wsu.edu]
+  (https://github.com/invokeImmediately)
+@license MIT - Copyright © 2021
+  Washington State University
+  https://mit-license.org/
+***************************************/
+
+/*!*************************************
+ * BACKGROUND ART ROW
+ **************************************/
+.row--bg-art {
+  overflow-y: hidden;
+}
+
+.row--bg-art .row__column:after {
+  background: #eff0f1 url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/cougar-pride-tiling-3.png);
+  content: "";
+  height: 20em;
+  left: 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  position: absolute;
+  right: 0;
+}
+
+#cougar-pride-art {
+  background: #eff0f1 url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/cougar-pride-relief.svg) center no-repeat;
+  padding-bottom: 50%;
+  margin-bottom: calc(-2rem - 4px);
+  margin-top: 2rem;
+}
+
+.column .gform_fields.top_label li.gfield:first-child, .column .gform_fields.top_label>li.gfield+li.gfield:not(.gsection) {
+  margin-top: 1em;
+}
+
+/*!*************************************
+ * TRIBE CALENDAR EVENTS FIXES
+ **************************************/
+
+.tribe-events-sub-nav {
+  max-width: none;
+}
+
+.tribe-events-event-url a,
+.tribe-venue-url a,
+.tribe-organizer-url a {
+  word-break: break-all;
+}
+
+.tribe-events-nav-previous,
+.tribe-events-nav-next {
+  max-width: 35ch;
+}
+
+/*!*************************************
+ * DAESA STAFF LIST
+ * (TO BE REMOVED.)
+ **************************************/
+
+.staff-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  max-width: none;
+  padding: 0;
+}
+
+.staff-list__item {
+  box-sizing: border-box;
+  width: 33%;
+  padding-bottom: 3rem;
+}
+
+.staff-list__item:nth-child(3n + 1) {
+  padding-right: 1.325rem;
+}
+
+.staff-list__item:nth-child(3n + 2) {
+  padding-left: .625rem;
+  padding-right: .625rem;
+}
+
+.staff-list__item:nth-child(3n) {
+  padding-left: 1.325rem;
+}
+
+.staff-list__email,
+.staff-list__name,
+.staff-list__phone,
+.staff-list__photo-container,
+.staff-list__title,
+.staff-list__unit {
+  display: block;
+}
+
+.staff-list__email,
+.staff-list__name,
+.staff-list__title,
+.staff-list__unit {
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+
+.staff-list__name {
+  font-weight: 600;
+}
+
+.staff-list__title {
+  font-style: italic;
+}
+
+.staff-list__email,
+.staff-list__phone,
+.staff-list__title,
+.staff-list__unit {
+  margin-top: .33em;
+}
+
+/*!*************************************
+ * WIDGET ART
+ **************************************/
+
+.blog .side-right .two:after,
+.single-post .side-right .two:after {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/57/2020/07/cougar-pride-relief_faded.svg) center/contain no-repeat;
+  content: "";
+  position: absolute;
+  width: calc(100% - 2rem);
+  height: 0;
+  padding-bottom: 81.4%;
+  transform: translateY(2rem);
+}
+
+/*!*************************************
+ * GRAVITY FORMS CHOSEN FIELD FIX
+ **************************************/
+
+/*.gform_wrapper .chosen-container .chosen-drop {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.gform_wrapper .chosen-container-single.chosen-with-drop .chosen-drop {
+    height: auto;
+}*/
+
+/*!*************************************
+ * ADDITIONAL CSS FOR DAESA PEOPLE PAGE
+ * @version Last updated 2020-08-24.
+ * @todo Needs to be moved to git:CSS/daes-custom.less.
+ **************************************/
+
+.daesa-staff-list__unit-programs {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.programs-list:before {
+  content: "Associated Programs: ";
+  font-weight: 600;
+  white-space: pre;
+}
+
+.programs-list--services:before {
+  content: "Associated Programs and Services: ";
+}
+
+.column .programs-list {
+  margin-top: 2rem;
+}
+
+.programs-list__program {
+  display: inline;
+}
+
+.programs-list__program:not(:last-child):after {
+  content: ",";
+}
+
+.programs-list__program:last-child:before {
+  content: "and ";
+  white-space: pre;
+}
+
+/*!*************************************
+ * ADDITIONAL CSS FOR DAESA PEOPLE PAGE
+ * @version Last updated 2020-08-24.
+ * @todo Needs to be moved to git:CSS/daes-custom.less.
+ **************************************/
+
+.programs-list {
+  display: none;
+}
+
+.daesa-staff-list__unit-building,
+.daesa-staff-list__unit-address{
+  font-size: .9em
+}
+
+.daesa-staff-list__unit-address,
+.daesa-staff-list__unit-building,
+.daesa-staff-list__unit-phone,
+.daesa-staff-list__unit-email {
+  display: none;
+}
+
+.daesa-staff-list__staff-name,
+.daesa-staff-list__staff-email,
+.daesa-staff-list__staff-phone {
+  display: block;
+}
+
+.daesa-staff-list__staff-photo,
+.daesa-staff-list__staff-title {
+  width: 100%;
+}
+
+/*!*************************************
+ * Simple button design.
+ * @author Daniel Rieck
+ * @version Added 2020-10-12.
+ **************************************/
+
+.simple-button {
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 9px;
+  padding: .5rem 1rem;
+}
+
+.simple-button:not(:hover) {
+  background-color: #eff0f1;
+  border: 1px solid #a60f2d;
+  box-shadow: 0 12px 16px 2px rgba(0,0,0,.03), 0 5px 22px 4px rgba(0,0,0,.03), 0 6px 13px 0 rgba(0,0,0,.02);
+}
+
+.simple-button:hover {
+  background-color: #eff0f1;
+  border: 1px solid #ca1237;
+  box-shadow: 0 12px 16px 2px rgba(202,18,55,.05), 0 5px 22px 4px rgba(202,18,55,.05), 0 6px 13px 0 rgba(202,18,55,.02);
+}
+
+.column .simple-button:hover {
+  border-bottom-width: 1px;
+  text-shadow: none;
+}
+
+/*!*************************************
+ * More CSS for DAESA enewsletter archive.
+ * @author Daniel Rieck
+ * @version Added 2020-10-12.
+ * TODO: Add to GitHub project.
+ **************************************/
+.column #daesa-star-issue a {
+  text-decoration: none !important;
+}
+
+/*!*************************************
+ * SPINE THEME COLOR OVERRIDES
+ * Tweaks to the default Spine Theme palette that make better use of color theory.
+ * @version Added on 2021-02-08.
+ * @author Daniel Rieck
+ **************************************/
+.orange-text {
+  color: #a63d0f;
+}
+
+/*!*************************************
+ * FORM STYLING TWEAKS
+ * Fixes to aspects of Gravity Forms' default styling, especially spacing.
+ * @author Daniel Rieck
+ **************************************/
+
+.page-law-awards #selection-criteria header h2 {
+  font-size: 1.6em;
+  color: #2a3033;
+}
+
+#gform_wrapper_8,
+#gform_wrapper_9 {
+  margin-top: 0;
+}
+
+/*!*************************************
+ * IMAGE PLACER SETTINGS
+ * Adjusts source images for display
+ *   on the DAESA website using CSS.
+ * @author Daniel Rieck
+ **************************************/
+
+.img-placer {
+  float: right;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-placer--flt-left {
+  float: left;
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* Post 1920, image 1919 of pizza. */
+@media (max-width: 480px)  {
+  .postid-1920 .wp-image-1919 {
+    float: right !important;
+    margin-left: 1rem !important;
+    max-width: 118px !important;
+  }
+}
+
+/* Post 1920, image 1087 of Ray Acuña-Luna. */
+.img-placer--1920-1087 {
+  width: 175px !important;
+  height: calc(198px + 2.25rem) !important;
+}
+
+.img-placer--1920-1087 .wp-caption-text {
+  position: absolute;
+  top: 198px;
+}
+
+.img-placer--1920-1087 .wp-image-1087 {
+  clip-path: polygon(20% 0%, 20% 100%, 70% 100%, 70% 0%);
+  height: 198px !important;
+  width: auto;
+  position: absolute;
+  max-width: none !important;
+  left: -71px;
+}
+
+@media (max-width: 480px)  {
+  .img-placer--1920-1087 .wp-image-1087 {
+    height: 134px !important;
+  left: -49px;
+  }
+
+  .img-placer--1920-1087 .wp-caption-text {
+    top: 134px;
+  }
+
+  .img-placer--1920-1087 {
+    width: 118px !important;
+    height: calc(134px + 2.25rem) !important;
+  }
+}
+
+/* Post 1920, image 1923 of Jessica Murray. */
+@media (max-width: 480px)  {
+  .postid-1920 #attachment_1923 {
+    max-width: 118px !important;
+  }
+}
+
+/* Post 1920, image 1925 of Jason Butcherite. */
+@media (max-width: 480px)  {
+  .postid-1920 #attachment_1925 {
+    max-width: 118px !important;
+  }
+}
+
+/*!*************************************
+ * UNIV COURSES HEADER TWEAK
+ * Adjust default color of heading
+ *   within the section header of
+ *   a UNIV courses list.
+ * @author Daniel Rieck
+ **************************************/
+
+.univ-courses-by-category > header > * {
+  color:#2a3033;
+  /*margin-bottom: 1.5rem;*/
+}
+
+.lst--none {
+  list-style-type: none;
+}
+
+/*!*************************************
+ * DAESA FIGURES
+ **************************************/
+.daesa-striped-fig {
+  background: url(https://s3.wp.wsu.edu/uploads/sites/57/2021/07/tiled-background-art_extra-light-gray-stripes-on-white_66w66h.png) repeat;
+  margin-top: 2rem;
+  width: 100% !important;
+}
+
+.daesa-striped-fig img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.daesa-striped-fig figcaption {
+  background: white;
+}
