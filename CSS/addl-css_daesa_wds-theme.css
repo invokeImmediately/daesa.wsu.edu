@@ -1,0 +1,267 @@
+/*!***************************************
+ * ▄▀▀▄ █▀▀▄ █▀▀▄ ▀█ █      ▄▀▀▀ ▄▀▀▀ ▄▀▀▀
+ * █▄▄█ █  █ █  █    █  ▄   █    ▀▀▀█ ▀▀▀█
+ * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
+ * FOR WDS-THEMED DAESA WEBSITES
+ * ---------------------------------------
+ * @version 0.0.0
+ * @author Daniel Rieck
+ *  [daniel.rieck@wsu.edu]
+ *  (https://github.com/invokeImmediately)
+ * @license MIT - Copyright © 2022
+ *   Washington State University
+ *   https://mit-license.org/
+ ****************************************/
+
+/*! ‑‑» ISSUE FIXES FOR WDS GLOBAL HEADER «‑‑ */
+
+.wsu-header-global:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc((100vw - 100%)/ -2);
+    right: calc((100vw - 100%)/ -2);
+    top: 100%;
+    /* top: calc(100% - 3px); */
+    width: auto;
+    height: 3px;
+    background-color: #e6e6e6;
+    /* bottom: 0; */
+}
+
+/*! ‑‑» ISSUE FIXES FOR WDS PRIMARY NAV «‑‑ */
+
+.wsu-navigation-site-vertical--color-dark .wsu-navigation-site-vertical__panel {
+  border: 0;
+}
+
+.wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical__open-button:focus, .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical__open-button:hover {
+    border-right: 0;
+  color: black;
+}
+
+.wsu-navigation-site-vertical__open-button {
+  border: 0;
+}
+
+/*! ‑‑» ISSUE FIXES FOR WDS CONTENT WRAPPER «‑‑ */
+
+.wsu-wrapper-content::after {
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    left: calc((100vw - 100%)/ -2);
+    right: calc((100vw - 100%)/ -2);
+    width: auto;
+    height: 3px;
+    background-color: #e6e6e6;
+}
+
+/*! ‑‑» ISSUE FIXES FOR BREADCRUMBS «‑‑ */
+
+.breadcrumbs .wsu-i-home {
+  margin-right: .5rem;
+}
+
+.breadcrumbs + h1 {
+  margin-top: -.75rem;
+}
+
+/*! ‑‑» ISSUE FIXES FOR LINKS «‑‑ */
+
+.wsu-color-background--gray-85 a,
+.wsu-color-background--gray-95 a {
+  color: white;
+  text-decoration-color: white;
+}
+
+.wsu-footer-site a {
+    outline-color: white;
+}
+
+.wsu-footer-site__offsite-menu li a:before {
+    background-color: white;
+}
+
+.wsu-footer-site__offsite-menu li a:focus::before {
+  height: 0;
+}
+
+.wsu-meta-address a {
+  text-decoration-color: white;
+}
+
+@media not all and (prefers-reduced-motion) {
+  a {
+    border-bottom: 2px solid transparent;
+    transition: border .15s ease;
+    transition: border .01s linear, text-decoration .01s linear;
+  }
+  
+  a:hover {
+    border-bottom-color: #a60f2d;
+    text-decoration-color: transparent;
+    transition: border .2s ease, text-decoration .1s ease;
+  }
+  
+  .wsu-footer-site__offsite-menu a,
+  .wsu-menu-deep-links a {
+    border-bottom-color: transparent;
+  }
+
+  .wsu-menu-deep-links a:after {
+    background-color: white;
+  }
+}
+
+/*! ‑‑» CUSTOMIZE APPEARANCE OF SITE HEADER «‑‑ */
+
+.wsu-header-site {
+    background-color: #333;
+    color: #fff;
+}
+
+.wsu-header-site__title {
+    color: inherit;
+}
+
+/*! ‑‑» ISSUE FIXES FOR HOME PAGE «‑‑ */
+
+@media only screen and (min-width: 993px) {
+  .home .wsu-hero .wsu-title {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  .home .wsu-hero .wsu-hero__caption {
+    max-width: 960px;
+  }
+}
+
+.home .breadcrumbs {
+  display: none;
+}
+
+/*! ‑‑» HEADING TAIL TEXT «‑‑ */
+
+.hX-tail-text {
+  display: block;
+  font-size: 1rem;
+}
+
+/*! ‑‑» ISSUE FIXES FOR WDS CARDS «‑‑ */
+
+.wsu-card.wsu-color-background--white {
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+
+.wsu-card[class*=wsu-color-background] {
+  border-radius: 4px;
+}
+
+.wsu-card-wrapper--univ-courses .wsu-card p + p {
+  margin-top: 1.675rem;
+}
+
+.wsu-card-wrapper--univ-courses h3 {
+  font-size: 1.5rem;
+}
+
+/*! ‑‑» MORE PROGRAM HEADLINES DESIGN «‑‑ */
+
+.more-news__associated-unit {
+  color: #5a5a5a;
+  display: block;
+}
+
+.wsu-color-background--gray-85 .more-news__associated-unit, .wsu-color-background--gray-95 .more-news__associated-unit {
+  color: #f2f2f2;
+}
+
+/*! ‑‑» FULL BLEED ROW DESIGN «‑‑ */
+
+.wsu-row.wsu-row--full-bleed:after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.wsu-row--full-bleed > .wsu-column {
+  z-index: 1;
+}
+
+/*! ‑‑» FULL BLEED ROW COLORING «‑‑ */
+
+.wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
+  margin-left: calc((100vw - 100%)/ -2);
+  margin-right: calc((100vw - 100%)/ -2);
+}
+
+@media screen and (min-width: 1260px) {
+  .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
+    margin-left: calc(((100vw - 100%) - 60px)/ -2);
+    margin-right: calc(((100vw - 100%) - 60px)/ -2);
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
+    margin-left: calc(((100vw - 100%) - 280px)/ -2);
+    margin-right: calc(((100vw - 100%) - 280px)/ -2);
+  }
+  
+  .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
+    margin-left: calc(((100vw - 100%) - 60px)/ -2);
+    margin-right: calc(((100vw - 100%) - 60px)/ -2);
+  }
+}
+
+/*! ‑‑» FULL BLEED ROW COLORING «‑‑ */
+
+.wsu-row--full-bleed.wsu-color-background--gray-0:after {
+  background-color: #f7f7f7;
+}
+
+.wsu-row--full-bleed.wsu-color-background--gray-5:after {
+  background-color: #f2f2f2;
+}
+
+.wsu-row--full-bleed.wsu-color-background--gray-10:after {
+  background-color: #e6e6e6;
+}
+
+.wsu-row--full-bleed.wsu-color-background--gray-85:after {
+  background-color: #262626;
+}
+
+.wsu-row--full-bleed.wsu-color-background--gray-95:after {
+  background-color: #262626;
+}
+
+/*! ‑‑» FULL BLEED ROW COLORING «‑‑ */
+
+.wsu-menu-deep-links > li:first-child {
+    width: 100%;
+}
+
+@media all and (min-width: 769px) {
+  .wsu-menu-deep-links > li:first-child > .sub-menu {
+    display: flex;
+    flex-wrap: wrap
+  }
+
+  .wsu-menu-deep-links > li:first-child > .sub-menu > li:not(:last-child):after {
+    content: ", ";
+    white-space: pre;
+  }
+
+  .wsu-menu-deep-links > li:first-child > .sub-menu > li:not(:last-child) a {
+    display: inline;
+  }
+}
