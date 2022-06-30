@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.1.0
+ * @version 0.2.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -12,6 +12,12 @@
  *   Washington State University
  *   https://mit-license.org/
  ****************************************/
+
+/*! —» Fix fuzzy downsampled images on Chrome «— */
+
+body {
+  image-rendering: -webkit-optimize-contrast;
+}
 
 /*! —» ISSUE FIXES FOR WDS GLOBAL HEADER «— */
 
@@ -42,6 +48,11 @@
 
 .wsu-navigation-site-vertical__open-button {
   border: 0;
+}
+
+.wsu-navigation-site-vertical .wsu-menu a+button:focus::before, .wsu-navigation-site-vertical .wsu-menu a+button:hover::before, .wsu-navigation-site-vertical .wsu-menu button:first-child:focus::before, .wsu-navigation-site-vertical .wsu-menu button:first-child:hover::before {
+    bottom: 50%;
+    transform: translateY(0.65rem);
 }
 
 /*! —» ISSUE FIXES FOR WDS CONTENT WRAPPER «— */
@@ -77,6 +88,12 @@ ol ul {
   font-size: inherit;
 }
 
+/*! —» Improve styling of nested ordered lists.  «— */
+
+ol li li li {
+  list-style-type: lower-roman;
+}
+
 /*! —» ISSUE FIXES FOR LINKS «— */
 
 .wsu-color-background--gray-85 a,
@@ -101,8 +118,20 @@ ol ul {
   text-decoration-color: white;
 }
 
+h1 a::after,
+h2 a::after,
+h3 a::after,
+h4 a::after,
+h5 a::after,
+h6 a::after {
+    display: inline;
+  font-size: .65em;
+    margin-left: .5em;
+}
+
 /*TODO: ↓ Remove soon; code is being covered by a change to the WDS system. ↓ */
-a:hover {
+
+/*a:hover {
   text-decoration-color: transparent;
 }
 
@@ -114,7 +143,7 @@ a:hover {
   a:hover {
     transition: color .2s ease, text-decoration .1s ease;
   }
-}
+}*/
 
 /*TODO: ↑ Remove soon; code is being covered by a change to the WDS system. ↑ */
 
@@ -125,6 +154,26 @@ a:hover {
 
 .wsu-menu-deep-links a:after {
   background-color: white;
+}
+
+/*! —» HX STYLE LINKS «— */
+
+.hx-style-link:not(:hover) {
+  color: inherit;
+  text-decoration-color: transparent;
+}
+
+.hx-style-link:hover {
+  text-decoration-color: inherit;
+}
+
+.hx-style-link::after {
+    content: '\F126';
+    font-family: wsu-icons;
+    font-size: .7em;
+  color: inherit;
+    margin-left: .5em;
+    text-decoration: none;
 }
 
 /*! —» CUSTOMIZE APPEARANCE OF SITE HEADER «— */
@@ -141,18 +190,30 @@ a:hover {
 /*! —» ISSUE FIXES FOR HOME PAGE «— */
 
 @media only screen and (min-width: 993px) {
-  .home .wsu-hero .wsu-title {
-    font-size: 4rem;
+  .home .wsu-hero .wsu-title,
+  .page-id-3252 .wsu-hero .wsu-title {
+    font-size: 3.5rem;
     line-height: 1.2;
   }
 
-  .home .wsu-hero .wsu-hero__caption {
+  .home .wsu-hero .wsu-hero__caption,
+  .page-id-3252 .wsu-hero .wsu-hero__caption {
     max-width: 960px;
   }
 }
 
 .home .breadcrumbs {
   display: none;
+}
+
+.home h1 {
+  font-size: 2.75rem;
+}
+
+@media screen and (max-width: 768px) {
+  .home h1 {
+    font-size: 2rem;
+  }
 }
 
 /*! —» HEADING TAIL TEXT «— */
@@ -278,20 +339,283 @@ a:hover {
   }
 }
 
-/*! —» UTILITY CLASSES «— */
+/*! —» BANNER DESIGN VARIANTS «— */
+
+.wsu-hero--hide-tail {
+  overflow-y: hidden;
+}
+
+.wsu-hero--shadow-text .wsu-title {
+  text-shadow: 0 0 1px #000, 0 0 3px rgb(0 0 0 / 50%), 0 0 5px  rgb(0 0 0 / 50%), 0 0 16px #000, 0 0 24px #000, 0 0 32px #000;
+}
+
+.wsu-hero--box-bg .wsu-hero__caption:before {
+  background: rgb(0 0 0 / 65%);
+}
+
+.wsu-hero--box-bg-darker .wsu-hero__caption:before {
+  background: rgb(0 0 0 / 85%);
+}
+
+.wsu-hero--invert-axis .wsu-hero__caption {
+  margin-left: auto;
+}
+
+.wsu-hero--invert-axis .wsu-hero__caption:before {
+  clip-path: polygon(100% 0, 100% 100%, 80px 100%, 0 calc(100% - 100px), 0 0);
+}
+
+/*! —» TABLEPRESS «— */
+.tablepress thead th,
+.dataTables_wrapper .tablepress.dataTable thead th:not(:hover):not(:focus) {
+  background: #f0f0f0!important;
+}
+
+.tablepress:not(.dataTable) {
+    border-top: 4px solid #a60f2d;
+}
+
+.tablepress thead th {
+  border-bottom-color: #bbb;
+}
+
+/*! —» ACCORDION ENHANCEMENTS «— */
+
+.wsu-accordion__content {
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.wsu-accordion--open .wsu-accordion__title:hover + .wsu-accordion__content {
+  border-color: #ccc;
+}
+
+/*! —» TRIBE EVENTS PAGES «— */
+
+#tribe-events {
+  padding-top: 0;
+}
+
+.post-type-archive-tribe_events .wsu-article-header,
+.single-tribe_events .wsu-article-header {
+  display: none;
+}
+
+.post-type-archive-tribe_events h3 a::after {
+  margin-left: 0.1em;
+}
+
+.tribe-events-notices li {
+  color: #767676;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.tribe-events-notices li:before {
+  content: "\F123";
+  display: inline-block;
+  position: absolute;
+  font-family: wsu-icons;
+  left: 0;
+  top: 48%;
+  transform: translateY(-50%);
+}
+
+/*! —» ICON VARIANTS «— */
 .wsu-i-arrow-right--offsite {
   margin-right: 0;
+  position: relative;
 }
 
 .wsu-i-arrow-right--offsite:before {
   display: inline-block;
     font-size: .6em;
-    transform: rotate(-45deg) translateX(-40%)  translateY(10%);
+    transform: translate(-15%, 40%) rotate(-45deg);
     margin-left: .5em;
 }
 
-/*! —» UTILITY CLASSES «— */
+@media not all and (prefers-reduced-motion) {
+  a:hover .wsu-i-arrow-right--offsite:before {
+    transform: rotate(-45deg);
+    transition: transform 0.2s ease;
+  }
+}
+
+/*! —» SEPARATOR VARIANTS «— */
+
+.wsu-separator--subtle {
+  border: 1px solid #e7e7e7 !important;
+}
+
+/*! —» PEOPLE CARD COLUMN «— */
+
+.wsu-column--auto-aligns-people-card {
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr;
+}
+
+.wsu-column--auto-aligns-people-card .wsu-card {
+  align-self: end;
+}
+
+/*! —» WIDTH UTILITY CLASSES «— */
 
 .mw-1x {
   max-width: 900px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/*! —» GRID UTILITY CLASSES «— */
+
+.dy-gr {
+  display: grid;
+}
+
+.alni-start {
+  align-items: start;
+}
+
+.alns-end {
+  align-self: end;
+}
+
+/*! —» TYPOGRAPHIC UTILITY CLASSES «— */
+
+.fw-lb {
+  font-weight: 300;
+}
+
+.fw-nb {
+  font-weight: 400;
+}
+
+.fw-sb {
+  font-weight: 600;
+}
+
+.fw-b {
+  font-weight: 700;
+}
+
+.fw-eb {
+  font-weight: 800;
+}
+
+/*! —» RESPONSIVE DESIGN UTILITY CLASSES «— */
+
+@media (max-width: 768px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .show-on-tablet {
+    display: none !important;
+  }
+}
+
+/*! —» NEWS PAGES «— */
+
+.archive .wsu-meta-byline {
+  display: none;
+}
+
+.archive .wsu-wrapper-sidebar p,
+.archive .wsu-wrapper-sidebar ol,
+.archive .wsu-wrapper-sidebar ul,
+.blog .wsu-wrapper-sidebar p,
+.blog .wsu-wrapper-sidebar ol,
+.blog .wsu-wrapper-sidebar ul,
+.single-post .wsu-wrapper-sidebar p,
+.single-post .wsu-wrapper-sidebar ol,
+.single-post .wsu-wrapper-sidebar ul {
+  font-size: .875rem;
+}
+
+.single-post .wsu-article p:not(:first-of-type),
+.single-post .wsu-article ol,
+.single-post .wsu-article ul {
+  font-size: .95rem;
+}
+
+.archive .wsu-widget + .wsu-widget,
+.blog .wsu-widget + .wsu-widget,
+.single-post .wsu-widget + .wsu-widget {
+  border-top: 1px solid #e7e7e7;
+  padding-top: 1.5rem;
+}
+
+.archive .wsu-article + .wsu-article,
+.blog .wsu-article + .wsu-article {
+  border-top: 1px solid #e7e7e7;
+  margin-top: -2.25rem;
+  padding-top: .5rem;
+}
+
+@media screen and (min-width: 1600px) {
+  .archive .wsu-wrapper-site,
+  .blog .wsu-wrapper-site,
+  .single-post .wsu-wrapper-site {
+    background-image: repeating-linear-gradient(-45deg, #f2f2f2 0, white 1px, white 8px, #f2f2f2 9px, #f2f2f2 10px);
+  }
+
+  .archive .wsu-wrapper-content,
+  .blog .wsu-wrapper-content,
+  .single-post .wsu-wrapper-content {
+    background: white;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+  }
+}
+
+/*! —» GRAVITY FORMS SELECT FIX «— */
+
+select.gfield_select:not([multiple]) {
+background-position: calc(100% - 1.22rem) .975em, calc(100% - .91rem) .975em,calc(100% - .5rem) .35em;
+  padding-right:2.5rem;
+}
+
+select.gfield_select:not([multiple]):hover {
+background-image: linear-gradient(45deg,transparent 50%,#606060 50%),linear-gradient(135deg,#606060 50%,transparent 50%),radial-gradient(#c0c0c0 70%,transparent 75%);
+}
+
+select.gfield_select:not([multiple]):focus {
+background-image: linear-gradient(45deg,transparent 50%,#d0d0d0 50%),linear-gradient(135deg,#d0d0d0 50%,transparent 50%),radial-gradient(#303030 70%,transparent 75%);
+}
+
+select.gfield_select:not([multiple]):active {
+background-image: linear-gradient(45deg,transparent 50%,white 50%),linear-gradient(135deg,white 50%,transparent 50%),radial-gradient(black 70%,transparent 75%);
+}
+
+/*! —» GRAVITY FORMS INPUT FIX «— */
+
+.gform_wrapper.gravity-theme .gfield-choice-input+label {
+  max-width: calc(100% - 32px - 1.8em);
+}
+
+/*! —» GRAVITY FORMS GRID GAP FIX «— */
+
+.gform_wrapper.gravity-theme .gform_fields {
+  grid-row-gap: 1.75rem;
+}
+
+/*! —» NESTED GRAVITY FORMS FIXES «— */
+
+.gpnf-nested-entries,
+.gpnf-row-actions > ul {
+  margin-bottom: 0;
+}
+
+.gpnf-nested-entries .gfield_list {
+  margin-bottom: 0;
+}
+
+/*! —» Font sizing of WSUWP Content Syndicate lists. «— */
+
+.wsuwp-content-syndicate-list {
+  font-size: inherit;
 }
