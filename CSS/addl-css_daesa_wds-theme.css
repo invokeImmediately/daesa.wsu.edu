@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.2.0
+ * @version 0.3.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -55,7 +55,11 @@ body {
     transform: translateY(0.65rem);
 }
 
-/*! —» ISSUE FIXES FOR WDS CONTENT WRAPPER «— */
+.wsu-navigation-site-vertical .wsu-menu button:first-child {
+    padding-right: 50px;
+}
+
+/*! —» ISSUE FIXES FOR WDS WRAPPERS «— */
 
 .wsu-wrapper-content::after {
     bottom: 0;
@@ -69,14 +73,44 @@ body {
     background-color: #e6e6e6;
 }
 
+@media screen and (min-width: 99rem) {
+  .wsu-wrapper-site {
+    background-image: repeating-linear-gradient(-45deg, #f2f2f2 0, white 1px, white 8px, #f2f2f2 9px, #f2f2f2 10px);
+  }
+  
+  .wsu-wrapper-content {
+    background: white;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+  }
+
+  .wsu-hero:after {
+    left: calc(((100vw - 1200px) - 278px) / 2);
+    right: calc(((100vw - 1200px) - 278px) / 2);
+  }
+
+  .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-hero:after {
+    left: calc(((100vw - 1200px) - 58px) / 2);
+    right: calc(((100vw - 1200px) - 58px) / 2);   
+  }
+
+  .wsu-hero .wsu-image-frame {
+    background-color: transparent;
+  }
+
+  .wsu-hero .wsu-image-frame img {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 83.3333%, calc(100% - ((100vw - 1200px) - 277px) / 2) 83.3333%, calc(100% - ((100vw - 1200px) - 277px) / 2) 100%, calc(((100vw - 1200px) - 277px) / 2) 100%, calc(((100vw - 1200px) - 277px) / 2) 83.3333%, 0% 83.3333%);
+  }
+
+  .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-hero .wsu-image-frame img {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 83.3333%, calc(100% - ((100vw - 1200px) - 59px) / 2) 83.3333%, calc(100% - ((100vw - 1200px) - 59px) / 2) 100%, calc(((100vw - 1200px) - 57px) / 2) 100%, calc(((100vw - 1200px) - 57px) / 2) 83.3333%, 0% 83.3333%);
+  }
+}
+
 /*! —» ISSUE FIXES FOR BREADCRUMBS «— */
 
 .breadcrumbs .wsu-i-home {
   margin-right: .5rem;
-}
-
-.breadcrumbs + h1 {
-  margin-top: -.75rem;
 }
 
 /*! —» ISSUE FIXES FOR LISTS «— */
@@ -88,7 +122,7 @@ ol ul {
   font-size: inherit;
 }
 
-/*! —» Improve styling of nested ordered lists.  «— */
+/*! --»  Improve styling of nested ordered lists.  «-- */
 
 ol li li li {
   list-style-type: lower-roman;
@@ -124,7 +158,7 @@ h3 a::after,
 h4 a::after,
 h5 a::after,
 h6 a::after {
-    display: inline;
+    /*display: inline;*/
   font-size: .65em;
     margin-left: .5em;
 }
@@ -154,6 +188,38 @@ h6 a::after {
 
 .wsu-menu-deep-links a:after {
   background-color: white;
+}
+
+/*! —» SHARPER PAGE HEADERS ENHANCEMENT «— */
+
+.breadcrumbs {
+    border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+    margin-bottom: 1.125rem;
+    padding-bottom: .625rem;
+}
+
+h1::after {
+    background: repeating-linear-gradient(-45deg, #999 -1px, white 0, white 2px, #999 3px, #999 4px);
+  background: linear-gradient(315deg, transparent 0, transparent calc(100% - 4.95rem), white calc(100% - 4.95rem), white 100%), repeating-linear-gradient(-45deg, #d0d0d0 -1px, white 0, white 2px, #d0d0d0 3px, #d0d0d0 4px);
+  width: 100%
+}
+
+h1::before {
+  box-sizing: border-box;
+  border-right: .375rem solid transparent;  
+  border-top: .375rem solid #a60f2d;
+    bottom: 0;
+    box-sizing: border-box;
+    content: '';
+    display: inline-block;
+    height: .375rem;
+    position: absolute;
+    width: 6.87rem;
+}
+
+.wsu-hero__caption h1::before {
+  content: none;
 }
 
 /*! —» HX STYLE LINKS «— */
@@ -196,9 +262,9 @@ h6 a::after {
     line-height: 1.2;
   }
 
-  .home .wsu-hero .wsu-hero__caption,
-  .page-id-3252 .wsu-hero .wsu-hero__caption {
-    max-width: 960px;
+  .home .wsu-hero .wsu-caption {
+    font-weight: 500;
+    margin-top: 2.25rem;
   }
 }
 
@@ -269,8 +335,6 @@ h6 a::after {
   z-index: 1;
 }
 
-/*! —» FULL BLEED ROW COLORING «— */
-
 .wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
   margin-left: calc((100vw - 100%)/ -2);
   margin-right: calc((100vw - 100%)/ -2);
@@ -299,22 +363,32 @@ h6 a::after {
 
 .wsu-row--full-bleed.wsu-color-background--gray-0:after {
   background-color: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
 }
 
 .wsu-row--full-bleed.wsu-color-background--gray-5:after {
   background-color: #f2f2f2;
+  border-bottom: 1px solid #e2e2e2;
+  border-top: 1px solid #e2e2e2;
 }
 
 .wsu-row--full-bleed.wsu-color-background--gray-10:after {
   background-color: #e6e6e6;
+  border-bottom: 1px solid #d6d6d6;
+  border-top: 1px solid #d6d6d6;
 }
 
 .wsu-row--full-bleed.wsu-color-background--gray-85:after {
   background-color: #262626;
+  border-bottom: 1px solid #161616;
+  border-top: 1px solid #161616;
 }
 
 .wsu-row--full-bleed.wsu-color-background--gray-95:after {
-  background-color: #262626;
+  background-color: #080808;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
 }
 
 /*! —» FULL BLEED ROW COLORING «— */
@@ -441,7 +515,22 @@ h6 a::after {
   }
 }
 
+/*! —» IMAGE VARIANTS «— */
+
+.wp-block-image.img--capped-resize img {
+  max-width: attr(width);
+  max-width: attr(width px);
+}
+
 /*! —» SEPARATOR VARIANTS «— */
+
+hr:not([class*=separator--style-]) {
+  background-color: #f7f7f7;
+    border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  height: .375rem;
+    margin: 3.125rem 0;
+}
 
 .wsu-separator--subtle {
   border: 1px solid #e7e7e7 !important;
@@ -536,10 +625,19 @@ h6 a::after {
   font-size: .875rem;
 }
 
-.single-post .wsu-article p:not(:first-of-type),
+.single-post .wsu-article p,
 .single-post .wsu-article ol,
 .single-post .wsu-article ul {
   font-size: .95rem;
+}
+
+.single-post .wsu-article > p:first-of-type {
+  margin-top: 1.75rem;
+  font-size: 1.125rem;
+}
+
+.single-post .wsu-article-hero {
+  margin-top: .3rem;
 }
 
 .archive .wsu-widget + .wsu-widget,
@@ -556,23 +654,19 @@ h6 a::after {
   padding-top: .5rem;
 }
 
-@media screen and (min-width: 1600px) {
-  .archive .wsu-wrapper-site,
-  .blog .wsu-wrapper-site,
-  .single-post .wsu-wrapper-site {
-    background-image: repeating-linear-gradient(-45deg, #f2f2f2 0, white 1px, white 8px, #f2f2f2 9px, #f2f2f2 10px);
+@media screen and (min-width: 769px) {
+  .archive .wsu-article-header__title,
+  .blog .wsu-article-header__title,
+  .single-post .wsu-article-header__title {
+    font-size: 2.4rem;
   }
-
-  .archive .wsu-wrapper-content,
-  .blog .wsu-wrapper-content,
-  .single-post .wsu-wrapper-content {
-    background: white;
-    border-left: 1px solid #e7e7e7;
-    border-right: 1px solid #e7e7e7;
+  
+  .single-post .wsu-article > h2 {
+    font-size: 1.7rem;
   }
 }
 
-/*! —» GRAVITY FORMS SELECT FIX «— */
+/*! ---»  GRAVITY FORMS SELECT FIX  «--- */
 
 select.gfield_select:not([multiple]) {
 background-position: calc(100% - 1.22rem) .975em, calc(100% - .91rem) .975em,calc(100% - .5rem) .35em;
@@ -591,19 +685,19 @@ select.gfield_select:not([multiple]):active {
 background-image: linear-gradient(45deg,transparent 50%,white 50%),linear-gradient(135deg,white 50%,transparent 50%),radial-gradient(black 70%,transparent 75%);
 }
 
-/*! —» GRAVITY FORMS INPUT FIX «— */
+/*! ---»  GRAVITY FORMS INPUT FIX  «--- */
 
 .gform_wrapper.gravity-theme .gfield-choice-input+label {
   max-width: calc(100% - 32px - 1.8em);
 }
 
-/*! —» GRAVITY FORMS GRID GAP FIX «— */
+/*! ---»  GRAVITY FORMS GRID GAP FIX  «--- */
 
 .gform_wrapper.gravity-theme .gform_fields {
   grid-row-gap: 1.75rem;
 }
 
-/*! —» NESTED GRAVITY FORMS FIXES «— */
+/*! ---»  NESTED GRAVITY FORMS FIXES  «--- */
 
 .gpnf-nested-entries,
 .gpnf-row-actions > ul {
@@ -614,7 +708,7 @@ background-image: linear-gradient(45deg,transparent 50%,white 50%),linear-gradie
   margin-bottom: 0;
 }
 
-/*! —» Font sizing of WSUWP Content Syndicate lists. «— */
+/*! --»  Font sizing of WSUWP Content Syndicate lists.  «-- */
 
 .wsuwp-content-syndicate-list {
   font-size: inherit;
