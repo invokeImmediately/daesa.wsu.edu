@@ -77,7 +77,7 @@ body {
   .wsu-wrapper-site {
     background-image: repeating-linear-gradient(-45deg, #f2f2f2 0, white 1px, white 8px, #f2f2f2 9px, #f2f2f2 10px);
   }
-  
+
   .wsu-wrapper-content {
     background: white;
     border-left: 1px solid #e7e7e7;
@@ -91,7 +91,7 @@ body {
 
   .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-hero:after {
     left: calc(((100vw - 1200px) - 58px) / 2);
-    right: calc(((100vw - 1200px) - 58px) / 2);   
+    right: calc(((100vw - 1200px) - 58px) / 2);
   }
 
   .wsu-hero .wsu-image-frame {
@@ -173,7 +173,7 @@ h6 a::after {
   a {
     transition: color .01s linear, text-decoration .01s linear;
   }
-  
+
   a:hover {
     transition: color .2s ease, text-decoration .1s ease;
   }
@@ -207,7 +207,7 @@ h1::after {
 
 h1::before {
   box-sizing: border-box;
-  border-right: .375rem solid transparent;  
+  border-right: .375rem solid transparent;
   border-top: .375rem solid #a60f2d;
     bottom: 0;
     box-sizing: border-box;
@@ -352,7 +352,7 @@ h1::before {
     margin-left: calc(((100vw - 100%) - 280px)/ -2);
     margin-right: calc(((100vw - 100%) - 280px)/ -2);
   }
-  
+
   .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
     margin-left: calc(((100vw - 100%) - 60px)/ -2);
     margin-right: calc(((100vw - 100%) - 60px)/ -2);
@@ -660,7 +660,7 @@ hr:not([class*=separator--style-]) {
   .single-post .wsu-article-header__title {
     font-size: 2.4rem;
   }
-  
+
   .single-post .wsu-article > h2 {
     font-size: 1.7rem;
   }
