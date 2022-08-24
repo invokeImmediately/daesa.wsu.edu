@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.3.0
+ * @version 0.4.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -84,17 +84,17 @@ body {
     border-right: 1px solid #e7e7e7;
   }
 
-  .wsu-hero:after {
+  .wsu-hero:not([class*="-hero--style-"])::after {
     left: calc(((100vw - 1200px) - 278px) / 2);
     right: calc(((100vw - 1200px) - 278px) / 2);
   }
 
-  .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-hero:after {
+  .wsu-navigation-site-vertical--is-closed .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-hero:not([class*="-hero--style-"])::after {
     left: calc(((100vw - 1200px) - 58px) / 2);
     right: calc(((100vw - 1200px) - 58px) / 2);
   }
 
-  .wsu-hero .wsu-image-frame {
+  .wsu-hero:not([class*="-hero--style-"]) .wsu-image-frame {
     background-color: transparent;
   }
 
@@ -413,6 +413,19 @@ h1::before {
   }
 }
 
+/*! —» HERO BANNER ENHANCEMENTS «— */
+
+.wsu-hero:not([class*="-hero--style-"]) .wsu-title,
+.wsu-hero:not([class*="-hero--style-"]) .wsu-caption {
+    text-shadow: 0 0 8px #000, 1px 2px 3px #000,
+    -1px -1px 1px #000;
+}
+
+.page .wsu-hero:not([class*="-hero--style-"]) .wsu-title {
+  font-size: 2.75rem;
+  line-height: 1.25;
+}
+
 /*! —» BANNER DESIGN VARIANTS «— */
 
 .wsu-hero--hide-tail {
@@ -470,7 +483,24 @@ h1::before {
   padding-top: 0;
 }
 
-.post-type-archive-tribe_events .wsu-article-header,
+.wsu-article-header__title:empty {
+  height: 5.25rem;
+}
+
+.wsu-article-header__title:empty:after {
+  margin-top: 4.875rem;
+}
+
+@media all and (max-width: 768px) {
+  .wsu-article-header__title:empty {
+    height: 3.9375rem;
+  }
+
+  .wsu-article-header__title:empty:after {
+    margin-top: 3.5625rem;
+  }
+}
+
 .single-tribe_events .wsu-article-header {
   display: none;
 }
@@ -712,4 +742,43 @@ background-image: linear-gradient(45deg,transparent 50%,white 50%),linear-gradie
 
 .wsuwp-content-syndicate-list {
   font-size: inherit;
+}
+
+/*! --»  Default top border issue fix.  «-- */
+
+.wsu-border-top--color-default {
+  border-top: 4px solid #5a5a5a; /* Desaturated #a60f2d */
+}
+
+/*! —» DISPLAY MODE UTILITY CLASSES «— */
+
+.dy-il {
+  display: inline;
+}
+
+.dy-bl {
+  display: block;
+}
+
+.dy-ilbl {
+  display: inline-block;
+}
+
+/*! —» Spacing utility classes? «— */
+
+.wsu-spacing-margin-bottom--ssxsmall {
+  margin-bottom: .25rem!important;
+}
+
+/*! —» Fix broken accordion nesting «— */
+
+.wsu-accordion--open .wsu-accordion:not(.wsu-accordion--open) .wsu-accordion__content {
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height cubic-bezier(0,0,.03,1) .3s,visibility 0s .4s;
+}
+
+.wsu-accordion--open .wsu-accordion:not(.wsu-accordion--open) .wsu-accordion__title::before {
+  content: "\F137";
 }
