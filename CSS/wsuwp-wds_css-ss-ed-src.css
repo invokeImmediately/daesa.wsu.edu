@@ -1,0 +1,661 @@
+/*!*************************************************************************************************
+ * █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+ * █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+ * ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+ * -------------------------------------------------------------------------------------------------
+ * The following section of this stylesheet contains CSS code built from Less modules written for
+ *   use on the DAESA website to customize the layout and presentation of WDS elements, components,
+ *   modules, and assemblies. This stylesheet is designed, built, and maintained by the Division of
+ *   Academic Engagement and Student Achievement (DAESA) in the Office of the Provost at Washington
+ *   State University (WSU).
+ *
+ * The CSS code in the following section was generated from precompiled CSS written in the Less
+ *   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
+ *   functioning in add-on mode. It was written for use with the Web Design System 2.0 theme.
+ *
+ * Please refer to the linked GitHub project for fully documented, precompiled source code.
+ *
+ * @version 0.1.0
+ *
+ * @link https://github.com/invokeImmediately/daesa.wsu.edu/blob/main/CSS/wsuwp-wds_css-ss-ed-src.css
+ * @link https://github.com/invokeImmediately/WSU-DAESA-CSS-WDS
+ * @link https://github.com/wsuwebteam/wsuwp-theme-wds
+ * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ * @license MIT Copyright (c) 2022 Washington State University
+ *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+ *     and associated documentation files (the "Software"), to deal in the Software without
+ *     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *     the Software is furnished to do so, subject to the following conditions:
+ *   The above copyright notice and this permission notice shall be included in all copies or
+ *     substantial portions of the Software.
+ *   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+ *     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ ***************************************************************************************************/
+/*! —» Enhancement: Custom Mailchimp Assemblies → Rules adapted from Mailchimp for displaying embedded emails «— */
+.mailchimp-email-embed p {
+  margin: 10px 0;
+  padding: 0;
+}
+
+.mailchimp-email-embed table {
+  border-collapse: collapse;
+}
+
+.mailchimp-email-embed h1,
+.mailchimp-email-embed h2,
+.mailchimp-email-embed h3,
+.mailchimp-email-embed h4,
+.mailchimp-email-embed h5,
+.mailchimp-email-embed h6 {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.mailchimp-email-embed img,
+.mailchimp-email-embed a img {
+  border: 0;
+  height: auto;
+  outline: none;
+  text-decoration: none;
+}
+
+.mailchimp-email-embed #bodyTable,
+.mailchimp-email-embed #bodyCell {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.mailchimp-email-embed .mcnPreviewText {
+  display: none !important;
+}
+
+.mailchimp-email-embed img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.mailchimp-email-embed .ReadMsgBody {
+  width: 100%;
+}
+
+.mailchimp-email-embed .ExternalClass {
+  width: 100%;
+}
+
+.mailchimp-email-embed a[href^=tel],
+.mailchimp-email-embed a[href^=sms] {
+  color: inherit;
+  cursor: default;
+  text-decoration: none;
+}
+
+.mailchimp-email-embed p,
+.mailchimp-email-embed a,
+.mailchimp-email-embed li,
+.mailchimp-email-embed td,
+.mailchimp-email-embed table,
+.mailchimp-email-embed blockquote {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.mailchimp-email-embed .ExternalClass,
+.mailchimp-email-embed .ExternalClass p,
+.mailchimp-email-embed .ExternalClass td,
+.mailchimp-email-embed .ExternalClass div,
+.mailchimp-email-embed .ExternalClass span,
+.mailchimp-email-embed .ExternalClass font {
+  line-height: 100%;
+}
+
+.mailchimp-email-embed a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+.mailchimp-email-embed #bodyCell {
+  border-top: 0;
+  padding: 10px;
+}
+
+.mailchimp-email-embed .templateContainer {
+  border: 0;
+  max-width: 600px !important;
+}
+
+.mailchimp-email-embed a.mcnButton {
+  display: block;
+}
+
+.mailchimp-email-embed .mcnImage,
+.mailchimp-email-embed .mcnRetinaImage {
+  vertical-align: bottom;
+}
+
+.mailchimp-email-embed .mcnTextContent {
+  word-break: break-word;
+}
+
+.mailchimp-email-embed .mcnTextContent img {
+  height: auto !important;
+}
+
+.mailchimp-email-embed .mcnDividerBlock {
+  table-layout: fixed !important;
+}
+
+.mailchimp-email-embed #bodyTable {
+  background-color: #FAFAFA;
+}
+
+.mailchimp-email-embed h1 {
+  color: #202020;
+  font-family: Helvetica;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 125%;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.mailchimp-email-embed h2 {
+  color: #202020;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 125%;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.mailchimp-email-embed h3 {
+  color: #202020;
+  font-family: Helvetica;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 125%;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.mailchimp-email-embed h4 {
+  color: #202020;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 125%;
+  letter-spacing: normal;
+  text-align: left;
+}
+
+.mailchimp-email-embed #templatePreheader {
+  background-color: #FAFAFA;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.mailchimp-email-embed #templatePreheader .mcnTextContent,
+.mailchimp-email-embed #templatePreheader .mcnTextContent p {
+  color: #656565;
+  font-family: Helvetica;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: left;
+}
+
+.mailchimp-email-embed #templatePreheader .mcnTextContent a,
+.mailchimp-email-embed #templatePreheader .mcnTextContent p a {
+  color: #656565;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.mailchimp-email-embed #templateHeader {
+  background-color: #fafafa;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 9px;
+  padding-bottom: 0;
+}
+
+.mailchimp-email-embed #templateHeader .mcnTextContent,
+.mailchimp-email-embed #templateHeader .mcnTextContent p {
+  color: #202020;
+  font-family: Helvetica;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+}
+
+.mailchimp-email-embed #templateHeader .mcnTextContent a,
+.mailchimp-email-embed #templateHeader .mcnTextContent p a {
+  color: #007C89;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.mailchimp-email-embed #templateBody {
+  background-color: transparent;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 2px none #eaeaea;
+  border-bottom: 2px none #EAEAEA;
+  padding-top: 0;
+  padding-bottom: 9px;
+}
+
+.mailchimp-email-embed #templateBody .mcnTextContent,
+.mailchimp-email-embed #templateBody .mcnTextContent p {
+  color: #202020;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+}
+
+.mailchimp-email-embed #templateBody .mcnTextContent a,
+.mailchimp-email-embed #templateBody .mcnTextContent p a {
+  color: #a60f2d;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.mailchimp-email-embed #templateFooter {
+  background-color: #fafafa;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-top: 0;
+  border-bottom: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.mailchimp-email-embed #templateFooter .mcnTextContent,
+.mailchimp-email-embed #templateFooter .mcnTextContent p {
+  color: #656565;
+  font-family: Helvetica;
+  font-size: 12px;
+  line-height: 150%;
+  text-align: center;
+}
+
+.mailchimp-email-embed #templateFooter .mcnTextContent a,
+.mailchimp-email-embed #templateFooter .mcnTextContent p a {
+  color: #656565;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+  .mailchimp-email-embed .templateContainer {
+    width: 600px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed table,
+        .mailchimp-email-embed td,
+        .mailchimp-email-embed p,
+        .mailchimp-email-embed a,
+        .mailchimp-email-embed li,
+        .mailchimp-email-embed blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnRetinaImage {
+    max-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImage {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnCartContainer,
+        .mailchimp-email-embed .mcnCaptionTopContent,
+        .mailchimp-email-embed .mcnRecContentContainer,
+        .mailchimp-email-embed .mcnCaptionBottomContent,
+        .mailchimp-email-embed .mcnTextContentContainer,
+        .mailchimp-email-embed .mcnBoxedTextContentContainer,
+        .mailchimp-email-embed .mcnImageGroupContentContainer,
+        .mailchimp-email-embed .mcnCaptionLeftTextContentContainer,
+        .mailchimp-email-embed .mcnCaptionRightTextContentContainer,
+        .mailchimp-email-embed .mcnCaptionLeftImageContentContainer,
+        .mailchimp-email-embed .mcnCaptionRightImageContentContainer,
+        .mailchimp-email-embed .mcnImageCardLeftTextContentContainer,
+        .mailchimp-email-embed .mcnImageCardRightTextContentContainer,
+        .mailchimp-email-embed .mcnImageCardLeftImageContentContainer,
+        .mailchimp-email-embed .mcnImageCardRightImageContentContainer {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnBoxedTextContentContainer {
+    min-width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImageGroupContent {
+    padding: 9px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnCaptionLeftContentOuter .mcnTextContent,
+        .mailchimp-email-embed .mcnCaptionRightContentOuter .mcnTextContent {
+    padding-top: 9px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImageCardTopImageContent,
+        .mailchimp-email-embed .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,
+        .mailchimp-email-embed .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
+    padding-top: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImageCardBottomImageContent {
+    padding-bottom: 9px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImageGroupBlockInner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImageGroupBlockOuter {
+    padding-top: 9px !important;
+    padding-bottom: 9px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnTextContent,
+        .mailchimp-email-embed .mcnBoxedTextContentColumn {
+    padding-right: 18px !important;
+    padding-left: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnImageCardLeftImageContent,
+        .mailchimp-email-embed .mcnImageCardRightImageContent {
+    padding-right: 18px !important;
+    padding-bottom: 0 !important;
+    padding-left: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcpreview-image-uploader {
+    display: none !important;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed h1 {
+    font-size: 22px !important;
+    line-height: 125% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed h2 {
+    font-size: 20px !important;
+    line-height: 125% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed h3 {
+    font-size: 18px !important;
+    line-height: 125% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed h4 {
+    font-size: 16px !important;
+    line-height: 150% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent,
+        .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent p {
+    font-size: 14px !important;
+    line-height: 150% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed #templatePreheader {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed #templatePreheader .mcnTextContent,
+        .mailchimp-email-embed #templatePreheader .mcnTextContent p {
+    font-size: 14px !important;
+    line-height: 150% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed #templateHeader .mcnTextContent,
+        .mailchimp-email-embed #templateHeader .mcnTextContent p {
+    font-size: 16px !important;
+    line-height: 150% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed #templateBody .mcnTextContent,
+        .mailchimp-email-embed #templateBody .mcnTextContent p {
+    font-size: 16px !important;
+    line-height: 150% !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mailchimp-email-embed #templateFooter .mcnTextContent,
+        .mailchimp-email-embed #templateFooter .mcnTextContent p {
+    font-size: 14px !important;
+    line-height: 150% !important;
+  }
+}
+
+/*! —» Enhancement: Custom Mailchimp Assemblies → Additional rules for improving compatibility of Mailchimp embeds with the WSUWP WDS theme «— */
+.mailchimp-email-embed #templateHeader .mcnImageContentContainer {
+  margin-top: -19px;
+}
+
+.mailchimp-email-embed table,
+.mailchimp-email-embed table td {
+  border: 0;
+}
+
+.mailchimp-email-embed table {
+  margin-bottom: 0;
+}
+
+.mailchimp-email-embed ul,
+.mailchimp-email-embed ol {
+  font-size: inherit;
+  margin: 0;
+}
+
+.mailchimp-email-embed figure {
+  margin: 0;
+}
+
+.mailchimp-email-embed .mcnDividerBlock td {
+  line-height: 0;
+}
+
+.mailchimp-email-embed td {
+  padding: 0;
+}
+
+/* Enhancement: WDS Section Components → Custom bordering «— */
+.wsu-section--bordered.wsu-color-background--gray-5 {
+  border-bottom: 1px solid #e7e7e7;
+  border-top: 1px solid #e7e7e7;
+}
+
+/* Enhancement: WDS Decorator Components → Custom design variants «— */
+.wsu-decorator[class*="--style-miter"] {
+  border: 2rem solid #e7e7e7;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+.wsu-decorator[class*="--style-miter"]:after {
+  background-color: #f2f2f2;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: calc(2.8284rem + 4px);
+}
+
+.wsu-decorator.wsu-decorator--style-miter-bl {
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: translateX(.15rem);
+}
+
+.wsu-decorator.wsu-decorator--style-miter-bl:after {
+  transform: translate(-50%,-100%) translate(-1rem,1rem) rotate(-45deg);
+}
+
+.wsu-decorator.wsu-decorator--style-miter-br {
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transform: translateX(-.45rem);
+}
+
+.wsu-decorator.wsu-decorator--style-miter-tr {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: translateX(-.25rem);
+}
+
+.wsu-decorator.wsu-decorator--style-miter-tr:after {
+  transform: translateX(-50%) translate(1rem,-1rem) rotate(-45deg);
+}
+
+.wsu-decorator.wsu-decorator--style-miter-tl {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.wsu-decorator[class*="--style-corner-trace"],
+.wsu-decorator[class*="--style-corner-trace"]:after {
+  background-color: #e7e7e7;
+  height: 4px;
+  position: absolute;
+  width: 2.8284rem;
+}
+
+.wsu-decorator.wsu-decorator--style-corner-trace-tl {
+  transform: translateX(.25rem) rotate(45deg);
+  transform-origin: 0 0;
+}
+
+.wsu-decorator.wsu-decorator--style-corner-trace-tl:after {
+  content: "";
+  left: 0;
+  top: 0;
+  transform: translateX(2.8284rem) rotate(-90deg) translateX(-2.8284rem) translateX(-.6rem);
+  transform-origin: 0 0;
+  width: 6.857rem;
+}
+
+.wsu-decorator.wsu-decorator--style-corner-trace-br {
+  transform: rotate(45deg);
+  transform-origin: 100% 0;
+}
+
+.wsu-decorator.wsu-decorator--style-corner-trace-br:after {
+  content: "";
+  left: 0;
+  top: 0;
+  transform: translateX(-3.4285rem) rotate(-90deg);
+  transform-origin: 50% 50%;
+  width: 6.857rem;
+}
+
+/*! —» Enhancement: WDS Site Footer Modules → Remixed layout for footer menu section «— */
+.wsu-menu-deep-links > li:first-child {
+  width: 100%;
+}
+
+@media all and (min-width: 769px) {
+  .wsu-menu-deep-links > li:first-child > .sub-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .wsu-menu-deep-links > li:first-child > .sub-menu > li:not(:last-child):after {
+    content: ", ";
+    white-space: pre;
+  }
+  
+  .wsu-menu-deep-links > li:first-child > .sub-menu > li:not(:last-child) a {
+    display: inline;
+  }
+}
