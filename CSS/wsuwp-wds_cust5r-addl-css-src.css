@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.5.0
+ * @version 0.5.1
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -13,7 +13,7 @@
  *   https://mit-license.org/
  ****************************************/
 
-/*! —» Fix fuzzy downsampled images on Chrome «— */
+/*! —» Issue Fix: Web Browsers → Avoid fuzzy downsampled images on Chrome «— */
 
 body {
   image-rendering: -webkit-optimize-contrast;
@@ -25,7 +25,7 @@ body {
   --scrollbar-w: 0px;
 }
 
-/*! —» Issue fix: WDS Websites → Compensate for width-changing effects of classic scrollbars «— */
+/*! —» Issue fix: WDS Websites → Compensate for width-changing effects of classic scrollbars «— */
 
 @media screen and (pointer: fine) and (min-width: 1260px) {
   .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-width--full {
@@ -374,17 +374,6 @@ h1::before {
   font-size: 1.5rem;
 }
 
-/*! —» MORE PROGRAM HEADLINES DESIGN «— */
-
-.more-news__associated-unit {
-  color: #5a5a5a;
-  display: block;
-}
-
-.wsu-color-background--gray-85 .more-news__associated-unit, .wsu-color-background--gray-95 .more-news__associated-unit {
-  color: #f2f2f2;
-}
-
 /*! —» Enhancement: WDS Column Components → Full-bleed row design «— */
 
 .wsu-row.wsu-row--full-bleed:after {
@@ -609,17 +598,6 @@ hr:not([class*=separator--style-]) {
 
 .wsu-separator--subtle {
   border: 1px solid #e7e7e7 !important;
-}
-
-/*! —» PEOPLE CARD COLUMN «— */
-
-.wsu-column--auto-aligns-people-card {
-  display: grid;
-  grid-template-rows: auto auto auto auto 1fr;
-}
-
-.wsu-column--auto-aligns-people-card .wsu-card {
-  align-self: end;
 }
 
 /*! —» Atomic CSS: Width «— */

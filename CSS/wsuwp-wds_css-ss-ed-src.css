@@ -1,7 +1,11 @@
 /*!*************************************************************************************************
- * █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
- * █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
- * ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+ * ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀ ▄
+ * █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄ ▄
+ *  ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+ *
+ *    █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄  ▐   ▌▄▀▀▀ █  █   █▀▀▀ █▀▀▄ █  █
+ *    █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█  ▐ █ ▌▀▀▀█ █  █   █▀▀  █  █ █  █
+ *    ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀ ▀ ▀ ▀ ▀▀▀   ▀▀  ▀ ▀▀▀▀ ▀▀▀   ▀▀
  * -------------------------------------------------------------------------------------------------
  * The following section of this stylesheet contains CSS code built from Less modules written for
  *   use on the DAESA website to customize the layout and presentation of WDS elements, components,
@@ -15,7 +19,7 @@
  *
  * Please refer to the linked GitHub project for fully documented, precompiled source code.
  *
- * @version 0.1.0
+ * @version 0.2.0
  *
  * @link https://github.com/invokeImmediately/daesa.wsu.edu/blob/main/CSS/wsuwp-wds_css-ss-ed-src.css
  * @link https://github.com/invokeImmediately/WSU-DAESA-CSS-WDS
@@ -322,11 +326,11 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed table,
-        .mailchimp-email-embed td,
-        .mailchimp-email-embed p,
-        .mailchimp-email-embed a,
-        .mailchimp-email-embed li,
-        .mailchimp-email-embed blockquote {
+            .mailchimp-email-embed td,
+            .mailchimp-email-embed p,
+            .mailchimp-email-embed a,
+            .mailchimp-email-embed li,
+            .mailchimp-email-embed blockquote {
     -webkit-text-size-adjust: none !important;
   }
 }
@@ -352,20 +356,20 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnCartContainer,
-        .mailchimp-email-embed .mcnCaptionTopContent,
-        .mailchimp-email-embed .mcnRecContentContainer,
-        .mailchimp-email-embed .mcnCaptionBottomContent,
-        .mailchimp-email-embed .mcnTextContentContainer,
-        .mailchimp-email-embed .mcnBoxedTextContentContainer,
-        .mailchimp-email-embed .mcnImageGroupContentContainer,
-        .mailchimp-email-embed .mcnCaptionLeftTextContentContainer,
-        .mailchimp-email-embed .mcnCaptionRightTextContentContainer,
-        .mailchimp-email-embed .mcnCaptionLeftImageContentContainer,
-        .mailchimp-email-embed .mcnCaptionRightImageContentContainer,
-        .mailchimp-email-embed .mcnImageCardLeftTextContentContainer,
-        .mailchimp-email-embed .mcnImageCardRightTextContentContainer,
-        .mailchimp-email-embed .mcnImageCardLeftImageContentContainer,
-        .mailchimp-email-embed .mcnImageCardRightImageContentContainer {
+            .mailchimp-email-embed .mcnCaptionTopContent,
+            .mailchimp-email-embed .mcnRecContentContainer,
+            .mailchimp-email-embed .mcnCaptionBottomContent,
+            .mailchimp-email-embed .mcnTextContentContainer,
+            .mailchimp-email-embed .mcnBoxedTextContentContainer,
+            .mailchimp-email-embed .mcnImageGroupContentContainer,
+            .mailchimp-email-embed .mcnCaptionLeftTextContentContainer,
+            .mailchimp-email-embed .mcnCaptionRightTextContentContainer,
+            .mailchimp-email-embed .mcnCaptionLeftImageContentContainer,
+            .mailchimp-email-embed .mcnCaptionRightImageContentContainer,
+            .mailchimp-email-embed .mcnImageCardLeftTextContentContainer,
+            .mailchimp-email-embed .mcnImageCardRightTextContentContainer,
+            .mailchimp-email-embed .mcnImageCardLeftImageContentContainer,
+            .mailchimp-email-embed .mcnImageCardRightImageContentContainer {
     max-width: 100% !important;
     width: 100% !important;
   }
@@ -385,15 +389,15 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnCaptionLeftContentOuter .mcnTextContent,
-        .mailchimp-email-embed .mcnCaptionRightContentOuter .mcnTextContent {
+            .mailchimp-email-embed .mcnCaptionRightContentOuter .mcnTextContent {
     padding-top: 9px !important;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnImageCardTopImageContent,
-        .mailchimp-email-embed .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,
-        .mailchimp-email-embed .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
+            .mailchimp-email-embed .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,
+            .mailchimp-email-embed .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
     padding-top: 18px !important;
   }
 }
@@ -420,7 +424,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnTextContent,
-        .mailchimp-email-embed .mcnBoxedTextContentColumn {
+            .mailchimp-email-embed .mcnBoxedTextContentColumn {
     padding-right: 18px !important;
     padding-left: 18px !important;
   }
@@ -428,7 +432,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnImageCardLeftImageContent,
-        .mailchimp-email-embed .mcnImageCardRightImageContent {
+            .mailchimp-email-embed .mcnImageCardRightImageContent {
     padding-right: 18px !important;
     padding-bottom: 0 !important;
     padding-left: 18px !important;
@@ -472,7 +476,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent,
-        .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent p {
+            .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent p {
     font-size: 14px !important;
     line-height: 150% !important;
   }
@@ -486,7 +490,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templatePreheader .mcnTextContent,
-        .mailchimp-email-embed #templatePreheader .mcnTextContent p {
+            .mailchimp-email-embed #templatePreheader .mcnTextContent p {
     font-size: 14px !important;
     line-height: 150% !important;
   }
@@ -494,7 +498,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templateHeader .mcnTextContent,
-        .mailchimp-email-embed #templateHeader .mcnTextContent p {
+            .mailchimp-email-embed #templateHeader .mcnTextContent p {
     font-size: 16px !important;
     line-height: 150% !important;
   }
@@ -502,7 +506,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templateBody .mcnTextContent,
-        .mailchimp-email-embed #templateBody .mcnTextContent p {
+            .mailchimp-email-embed #templateBody .mcnTextContent p {
     font-size: 16px !important;
     line-height: 150% !important;
   }
@@ -510,7 +514,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templateFooter .mcnTextContent,
-        .mailchimp-email-embed #templateFooter .mcnTextContent p {
+            .mailchimp-email-embed #templateFooter .mcnTextContent p {
     font-size: 14px !important;
     line-height: 150% !important;
   }
@@ -658,4 +662,25 @@
   .wsu-menu-deep-links > li:first-child > .sub-menu > li:not(:last-child) a {
     display: inline;
   }
+}
+
+/*! —» Enhancement: WDS Custom Component → More news headlines design «— */
+.more-news__associated-unit {
+  color: #5a5a5a;
+  display: block;
+}
+
+.wsu-color-background--gray-85 .more-news__associated-unit,
+.wsu-color-background--gray-95 .more-news__associated-unit {
+  color: #f2f2f2;
+}
+
+/*! —» Enhancement: WDS Column Components → People card design «— */
+.wsu-column--auto-aligns-people-card {
+  display: grid;
+  grid-template-rows: auto auto auto auto 1fr;
+}
+
+.wsu-column--auto-aligns-people-card .wsu-card {
+  align-self: end;
 }
