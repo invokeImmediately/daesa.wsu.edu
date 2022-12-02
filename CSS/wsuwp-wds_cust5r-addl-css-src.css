@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.6.0
+ * @version 0.7.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -63,6 +63,32 @@ body {
     margin-left: calc((100vw - 100% - var(--scrollbar-w))/ -2);
     margin-right: calc((100vw - 100% - var(--scrollbar-w))/ -2);
     width: auto;
+  }
+}
+
+/*! —» Issue fix: WDS Websites → Hide navigation menu and recolor header and footers when printing  «— */
+@media print {
+  .wsu-navigation-site-vertical {
+    display: none !important;
+  }
+
+  .wsu-header-site {
+    background-color: #f7f7f7;
+    color: #000;
+  }
+
+  .wsu-footer-site {
+    background-color: #f7f7f7;
+    color: #000;
+  }
+
+  .wsu-footer-site .wsu-coug-head {
+    fill: black;
+  }
+
+  .wsu-footer-global {
+    background-color: #f0f0f0;
+    color: #000;
   }
 }
 
