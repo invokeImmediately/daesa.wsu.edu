@@ -13,9 +13,9 @@
  *   Academic Engagement and Student Achievement (DAESA) in the Office of the Provost at Washington
  *   State University (WSU).
  *
- * The CSS code in the following section was generated from precompiled CSS written in the Less
- *   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
- *   functioning in add-on mode. It was written for use with the Web Design System 2.0 theme.
+ * Specifically, the CSS code in the following section was generated from precompiled CSS written in
+ *   the Less language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet
+ *   Editor functioning in add-on mode. It was written for use with the Web Design System 2.0 theme.
  *
  * Please refer to the linked GitHub project for fully documented, precompiled source code.
  *
@@ -326,11 +326,11 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed table,
-            .mailchimp-email-embed td,
-            .mailchimp-email-embed p,
-            .mailchimp-email-embed a,
-            .mailchimp-email-embed li,
-            .mailchimp-email-embed blockquote {
+  .mailchimp-email-embed td,
+  .mailchimp-email-embed p,
+  .mailchimp-email-embed a,
+  .mailchimp-email-embed li,
+  .mailchimp-email-embed blockquote {
     -webkit-text-size-adjust: none !important;
   }
 }
@@ -356,20 +356,20 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnCartContainer,
-            .mailchimp-email-embed .mcnCaptionTopContent,
-            .mailchimp-email-embed .mcnRecContentContainer,
-            .mailchimp-email-embed .mcnCaptionBottomContent,
-            .mailchimp-email-embed .mcnTextContentContainer,
-            .mailchimp-email-embed .mcnBoxedTextContentContainer,
-            .mailchimp-email-embed .mcnImageGroupContentContainer,
-            .mailchimp-email-embed .mcnCaptionLeftTextContentContainer,
-            .mailchimp-email-embed .mcnCaptionRightTextContentContainer,
-            .mailchimp-email-embed .mcnCaptionLeftImageContentContainer,
-            .mailchimp-email-embed .mcnCaptionRightImageContentContainer,
-            .mailchimp-email-embed .mcnImageCardLeftTextContentContainer,
-            .mailchimp-email-embed .mcnImageCardRightTextContentContainer,
-            .mailchimp-email-embed .mcnImageCardLeftImageContentContainer,
-            .mailchimp-email-embed .mcnImageCardRightImageContentContainer {
+  .mailchimp-email-embed .mcnCaptionTopContent,
+  .mailchimp-email-embed .mcnRecContentContainer,
+  .mailchimp-email-embed .mcnCaptionBottomContent,
+  .mailchimp-email-embed .mcnTextContentContainer,
+  .mailchimp-email-embed .mcnBoxedTextContentContainer,
+  .mailchimp-email-embed .mcnImageGroupContentContainer,
+  .mailchimp-email-embed .mcnCaptionLeftTextContentContainer,
+  .mailchimp-email-embed .mcnCaptionRightTextContentContainer,
+  .mailchimp-email-embed .mcnCaptionLeftImageContentContainer,
+  .mailchimp-email-embed .mcnCaptionRightImageContentContainer,
+  .mailchimp-email-embed .mcnImageCardLeftTextContentContainer,
+  .mailchimp-email-embed .mcnImageCardRightTextContentContainer,
+  .mailchimp-email-embed .mcnImageCardLeftImageContentContainer,
+  .mailchimp-email-embed .mcnImageCardRightImageContentContainer {
     max-width: 100% !important;
     width: 100% !important;
   }
@@ -389,15 +389,15 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnCaptionLeftContentOuter .mcnTextContent,
-            .mailchimp-email-embed .mcnCaptionRightContentOuter .mcnTextContent {
+  .mailchimp-email-embed .mcnCaptionRightContentOuter .mcnTextContent {
     padding-top: 9px !important;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnImageCardTopImageContent,
-            .mailchimp-email-embed .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,
-            .mailchimp-email-embed .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
+  .mailchimp-email-embed .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,
+  .mailchimp-email-embed .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent {
     padding-top: 18px !important;
   }
 }
@@ -424,7 +424,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnTextContent,
-            .mailchimp-email-embed .mcnBoxedTextContentColumn {
+  .mailchimp-email-embed .mcnBoxedTextContentColumn {
     padding-right: 18px !important;
     padding-left: 18px !important;
   }
@@ -432,7 +432,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnImageCardLeftImageContent,
-            .mailchimp-email-embed .mcnImageCardRightImageContent {
+  .mailchimp-email-embed .mcnImageCardRightImageContent {
     padding-right: 18px !important;
     padding-bottom: 0 !important;
     padding-left: 18px !important;
@@ -476,7 +476,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent,
-            .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent p {
+  .mailchimp-email-embed .mcnBoxedTextContentContainer .mcnTextContent p {
     font-size: 14px !important;
     line-height: 150% !important;
   }
@@ -490,7 +490,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templatePreheader .mcnTextContent,
-            .mailchimp-email-embed #templatePreheader .mcnTextContent p {
+  .mailchimp-email-embed #templatePreheader .mcnTextContent p {
     font-size: 14px !important;
     line-height: 150% !important;
   }
@@ -498,7 +498,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templateHeader .mcnTextContent,
-            .mailchimp-email-embed #templateHeader .mcnTextContent p {
+  .mailchimp-email-embed #templateHeader .mcnTextContent p {
     font-size: 16px !important;
     line-height: 150% !important;
   }
@@ -506,7 +506,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templateBody .mcnTextContent,
-            .mailchimp-email-embed #templateBody .mcnTextContent p {
+  .mailchimp-email-embed #templateBody .mcnTextContent p {
     font-size: 16px !important;
     line-height: 150% !important;
   }
@@ -514,7 +514,7 @@
 
 @media only screen and (max-width: 480px) {
   .mailchimp-email-embed #templateFooter .mcnTextContent,
-            .mailchimp-email-embed #templateFooter .mcnTextContent p {
+  .mailchimp-email-embed #templateFooter .mcnTextContent p {
     font-size: 14px !important;
     line-height: 150% !important;
   }
