@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.7.0
+ * @version 0.8.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -89,6 +89,33 @@ body {
   .wsu-footer-global {
     background-color: #f0f0f0;
     color: #000;
+  }
+
+  .wsu-card-group--per-row-3 .wsu-card, .wsu-card-wrapper--per-row-3 .wsu-card {
+    width: calc(100% - (.875rem * 2));
+  }
+
+  .wsu-row--halves .wsu-column {
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  
+  .wsu-row--sidebar-right .wsu-column, .wsu-row--sidebar-right .wsu-column:last-child {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .wsu-row--thirds .wsu-column {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .wsu-accordion__content {
+    visibility: visible !important;
+    max-height: none !important;
   }
 }
 
@@ -579,7 +606,7 @@ h1 {
 }
 
 h1::after {
-  background: repeating-linear-gradient(45deg, #e6e6e6 0, transparent 1px, transparent 3px, #e6e6e6 4px, #e6e6e6 5px);
+  background: repeating-linear-gradient(-45deg, #e6e6e6 0, transparent 1px, transparent 3px, #e6e6e6 4px, #e6e6e6 5px);
   bottom: calc(-.375rem - 1px);
   margin: 0;
   position: absolute;
@@ -588,7 +615,7 @@ h1::after {
 }
 
 .wsu-column--white-text h1::after {
-  background: repeating-linear-gradient(45deg, rgb(230 230 230 / 60%) 0, transparent 1px, transparent 3px, rgb(230 230 230 / 60%) 4px, rgb(230 230 230 / 60%) 5px);
+  background: repeating-linear-gradient(-45deg, rgb(230 230 230 / 60%) 0, transparent 1px, transparent 3px, rgb(230 230 230 / 60%) 4px, rgb(230 230 230 / 60%) 5px);
 }
 
 h1::before {
