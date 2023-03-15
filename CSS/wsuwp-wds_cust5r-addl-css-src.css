@@ -4,7 +4,7 @@
  * █  ▀ ▀▀▀  ▀▀▀     ▀▀▀     ▀▀▀ ▀▀▀  ▀▀▀
  * FOR WDS-THEMED DAESA WEBSITES
  * ---------------------------------------
- * @version 0.8.0
+ * @version 0.8.1
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -633,6 +633,14 @@ h1::before {
 
 .wsu-hero__caption h1::before {
   content: none;
+}
+
+.wsu-heading--style-marked::after, .wsu-heading--style-marked::before {
+    background-color: transparent;
+    box-sizing: border-box;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #a60f2d;
+    width: 56px;
 }
 
 /*! —» Enhancement: WDS Link Elements → Heading/hX-style «— */
