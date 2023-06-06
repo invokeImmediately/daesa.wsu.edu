@@ -12,7 +12,7 @@
  *  unique to DAESA branded websites.
  * Atomic CSS = Custom utility classes.
  * ---------------------------------------
- * @version 0.10.0
+ * @version 0.11.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -656,6 +656,31 @@ h1::before {
   border-top-color: #b3b3b3;
 }
 
+.wsu-heading--mark-color-autumn::after,
+.wsu-heading--mark-color-autumn::before {
+  border-top-color: #ff6727;
+}
+
+.wsu-heading--mark-color-goldfinch::after,
+.wsu-heading--mark-color-goldfinch::before {
+    border-top-color: #f3e700
+}
+
+.wsu-heading--mark-color-vineyard::after,
+.wsu-heading--mark-color-vineyard::before {
+    border-top-color: #aadc24
+}
+
+.wsu-heading--mark-color-pacificsky::after,
+.wsu-heading--mark-color-pacificsky::before {
+    border-top-color: #5bc3f5
+}
+
+.wsu-heading--mark-color-midnight::after,
+.wsu-heading--mark-color-midnight::before {
+    border-top-color: #002d61
+}
+
 /*! —» Enhancement: WDS Link Elements → Heading/hX-style «— */
 
 .hx-style-link:not(:hover) {
@@ -919,6 +944,13 @@ hr:not([class*=separator--style-]) {
   .wsu-row-fixed-h__top-scroll-indctr {
     display: none;
   }
+}
+
+/*! —» WDS Enhancement: Block tables → Default styling «— */
+
+.wp-block-table th {
+  background-color: #f0f0f0;
+  text-align: left;
 }
 
 /*! —» Enhancement: WDS Decorator Components → Background art «— */
@@ -1209,13 +1241,6 @@ hr:not([class*=separator--style-]) {
   .wsu-section--on-this-page.wsu-section--minimalist-on-this-page.wsu-section--left-aligned-on-this-page .wsu-anchor-menu > li:first-child {
     margin-left: -2rem;
   }
-}
-
-/*! —» WDS Customization: Block tables → DAESA styled «— */
-
-.wp-block-table--daesa th {
-  background-color: #f0f0f0;
-  text-align: left;
 }
 
 /*! —» Customization: Container-based modifications → Typographic weight «— */
