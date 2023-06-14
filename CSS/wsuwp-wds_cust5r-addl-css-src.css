@@ -12,7 +12,7 @@
  *  unique to DAESA branded websites.
  * Atomic CSS = Custom utility classes.
  * ---------------------------------------
- * @version 0.12.0
+ * @version 0.12.1
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -27,23 +27,9 @@ body {
   image-rendering: -webkit-optimize-contrast;
 }
 
-/*! —» Issue fix: WDS Websites → Set CSS variable for handling scrollbar artifacts «— */
-
-:root {
-  --scrollbar-w: 0px;
-}
-
-/*! —» Issue fix: WDS Websites → Responsive design: Padding (Fix overly generous padding and text sizingon footers, site content wrapper, etc.) «— */
+/*! —» Issue fix: WDS Websites → Responsive design: Padding (Fix overly generous padding and text sizing on site content wrapper, hero banners, cards, footers, etc.) «— */
 
 @media screen and (max-width: 480px) {
-  .wsu-footer-global {
-    padding: 1.5rem 1.25rem;
-  }
-
-  .wsu-footer-site {
-    padding: 2.25rem 1.25rem;
-  }
-
   .wsu-wrapper-content {
     padding: 5.125rem 1.25rem 4.125rem;
   }
@@ -55,6 +41,14 @@ body {
 
   .wsu-hero:not([class*="-hero--style-"]):not([class*=wsu-style--]) .wsu-hero__caption {
     padding: 3.125rem 1.25rem;
+  }
+
+  .wsu-footer-global {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .wsu-footer-site {
+    padding: 2.25rem 1.25rem;
   }
 }
 
@@ -83,7 +77,11 @@ body {
 }
 
 
-/*! —» Issue fix: WDS Websites → Compensate for width-changing effects of classic scrollbars «— */
+/*! —» Issue fix: WDS Websites → Responsive Design: Compensate for width-changing effects of classic scrollbars «— */
+
+:root {
+  --scrollbar-w: 0px;
+}
 
 @media screen and (pointer: fine) and (min-width: 1260px) {
   .wsu-navigation-site-vertical~.wsu-wrapper-site .wsu-width--full {
@@ -124,7 +122,7 @@ body {
   }
 }
 
-/*! —» Issue fix: WDS Websites → Hide navigation menu and recolor header and footers when printing  «— */
+/*! —» Issue fix: WDS Websites → Responsive design: Hide navigation menu and recolor header and footers when printing  «— */
 @media print {
   .wsu-navigation-site-vertical {
     display: none !important;
@@ -177,7 +175,7 @@ body {
   }
 }
 
-/*! —» Issue Fix: WDS Link Elements → Coloring «— */
+/*! —» Issue Fix: Link WDS Elements → Coloring «— */
 
 .wsu-color-background--gray-85 a,
 .wsu-color-background--gray-95 a {
@@ -220,13 +218,13 @@ h6 a::after {
   background-color: white;
 }
 
-/*! —» Issue Fix: WDS List Elements → Marker color inheritance «— */
+/*! —» Issue Fix: List WDS Elements → Marker color inheritance «— */
 
 [class*=wsu-color-text--] li::marker {
   color: inherit;
 }
 
-/*! —» Issue Fix: WDS List Elements → Typographical sizing «— */
+/*! —» Issue Fix: List WDS Elements → Typography: Font sizing «— */
 
 ul ul,
 ol ol,
@@ -235,25 +233,25 @@ ol ul {
   font-size: inherit;
 }
 
-/*! —» Issue Fix: WDS List Elements → Improve presentation when ordered and nested «— */
+/*! —» Issue Fix: List WDS Elements → Presentation: Improve list presentation when ordered and nested «— */
 
 ol li li li {
   list-style-type: lower-roman;
 }
 
-/*! —» Issue Fix: WDS Paragraph Elements → Hide when empty «— */
+/*! —» Issue Fix: Paragraph WDS Elements → Layout: Hide paragraphs when empty «— */
 
 p:empty {
   display: none !important;
 }
 
-/*! —» Issue Fix: WDS Breadcrumb Components → Home icon spacing «— */
+/*! —» Issue Fix: Breadcrumb WDS Components → Presentation: Adjust home icon spacing «— */
 
 .breadcrumbs .wsu-i-home {
   margin-right: .5rem;
 }
 
-/*! —» Issue Fix: WDS Content Wrapper Components → Overall presentation «— */
+/*! —» Issue Fix: Content Wrapper WDS Components → Overall presentation «— */
 
 .wsu-wrapper-site {
   background-color: #f7f7f7;
@@ -318,7 +316,7 @@ p:empty {
   }
 }
 
-/*! —» Issue Fix: WDS Section Components → Responsive design «— */
+/*! —» Issue Fix: Section WDS Components → Responsive design «— */
 
 @media screen and (max-width: 576px) {
   .wsu-section__inner {
@@ -327,7 +325,7 @@ p:empty {
   }
 }
 
-/*! —» Issue Fix: WDS Accordion Components → Layout of nested accordions «— */
+/*! —» Issue Fix: Accordion WDS Components → Layout of nested accordions «— */
 
 .wsu-accordion--open .wsu-accordion:not(.wsu-accordion--open) .wsu-accordion__content {
   max-height: 0;
@@ -340,7 +338,7 @@ p:empty {
   content: "\F137";
 }
 
-/*! —» Issue Fix: WDS Global Header Modules → Bordering «— */
+/*! —» Issue Fix: Global Header WDS Modules → Bordering «— */
 
 .wsu-header-global:after {
   background-color: #e6e6e6;
@@ -354,7 +352,7 @@ p:empty {
   width: auto;
 }
 
-/*! —» Issue Fix: WDS Hero Banner Modules → Presentation «— */
+/*! —» Issue Fix: Hero Banner WDS Modules → Presentation «— */
 
 .wsu-hero--no-bottom-bleed .wsu-image-frame--fill {
   bottom: 0;
@@ -364,7 +362,7 @@ p:empty {
   content: none;
 }
 
-/*! —» Issue Fix: WDS Primary Navigation Modules → Presentation «— */
+/*! —» Issue Fix: Primary Navigation WDS Modules → Presentation «— */
 
 .wsu-navigation-site-vertical--color-dark .wsu-navigation-site-vertical__panel {
   border: 0;
@@ -392,7 +390,7 @@ p:empty {
     padding-right: 50px;
 }
 
-/*! —» Issue Fix: WDS Card Modules → Overall presentation «— */
+/*! —» Issue Fix: Card WDS Modules → Overall presentation «— */
 
 .wsu-card.wsu-color-background--white {
   border-bottom: 1px solid #e6e6e6;
@@ -412,7 +410,7 @@ p:empty {
   font-size: 1.5rem;
 }
 
-/*! —» Issue Fix: WDS Sticky Nav Modules → Background «— */
+/*! —» Issue Fix: Sticky Nav WDS Modules → Background «— */
 
 .wsu-sticky-nav--style-crimson .wsu-anchor-menu {
   justify-content: center;
@@ -443,13 +441,13 @@ nav.wsu-sticky-nav--style-crimson {
   }
 }
 
-/*! —» Issue Fix: WSUWP Content Syndicate Modules → Font sizing «— */
+/*! —» Issue Fix: Content Syndicate WDS Modules → Typography: Font sizing «— */
 
 .wsuwp-content-syndicate-list {
   font-size: inherit;
 }
 
-/*! —» Issue Fix: TablePress Modules → Overall presentation «— */
+/*! —» Issue Fix: TablePress Plugin Block Assemblies → Overall presentation «— */
 
 .tablepress thead th,
 .dataTables_wrapper .tablepress.dataTable thead th:not(:hover):not(:focus) {
@@ -464,7 +462,7 @@ nav.wsu-sticky-nav--style-crimson {
   border-bottom-color: #bbb;
 }
 
-/*! —» Issue Fix: Tribe Events Calendar Block Assemblies → Overall presentation «— */
+/*! —» Issue Fix: Tribe Events Calendar Plugin Block Assemblies → Overall presentation «— */
 
 #tribe-events {
   padding-top: 0;
@@ -571,26 +569,26 @@ nav.wsu-sticky-nav--style-crimson {
   }
 }
 
-/*! —» Issue fix: Gravity Forms Block Assemblies → Radio and checkbox font weights «— */
+/*! —» Issue fix: Gravity Forms Block Assemblies → Radio and checkbox fields: Font weights «— */
 
 .gfield_radio .gchoice label,
 .gfield_checkbox .gchoice label {
   font-weight: 400;
 }
 
-/*! —» Issue Fix: Gravity Forms Block Assemblies → Input field maximum width «— */
+/*! —» Issue Fix: Gravity Forms Block Assemblies → Input fields: Maximum width «— */
 
 .gform_wrapper.gravity-theme .gfield-choice-input+label {
   max-width: calc(100% - 32px - 1.8em);
 }
 
-/*! —» Issue Fix: Gravity Forms Block Assemblies → Overly wide grid gap «— */
+/*! —» Issue Fix: Gravity Forms Block Assemblies → Whitespace: Reduce overly wide grid gap «— */
 
 .gform_wrapper.gravity-theme .gform_fields {
   grid-row-gap: 1.75rem;
 }
 
-/*! —» Issue Fix: Gravity Forms Block Assemblies → Junky layout of nested entries «— */
+/*! —» Issue Fix: Gravity Forms Block Assemblies → Layout: Address junky layout of nested entries «— */
 
 .gpnf-nested-entries,
 .gpnf-row-actions > ul {
@@ -601,7 +599,7 @@ nav.wsu-sticky-nav--style-crimson {
   margin-bottom: 0;
 }
 
-/*! —» Issue Fix: WDS Block Assemblies on Home Pages → Typographical sizing «— */
+/*! —» Issue Fix: Home Page WDS Block Assemblies → Typography: Font sizing «— */
 
 @media only screen and (min-width: 993px) {
   .home .wsu-hero .wsu-title,
@@ -630,7 +628,7 @@ nav.wsu-sticky-nav--style-crimson {
   }
 }
 
-/*! —» Enhancement: WDS Site Header Modules → Coloring «— */
+/*! —» Enhancement: Site Header WDS Modules → Coloring «— */
 
 .wsu-header-site {
   background-color: #333;
@@ -641,7 +639,7 @@ nav.wsu-sticky-nav--style-crimson {
     color: inherit;
 }
 
-/*! —» Enhancement: Page header assemblies → Sharper presentation «— */
+/*! —» Customization: Page Header Block Assemblies → Sharper presentation «— */
 
 .breadcrumbs {
   border-bottom: 1px solid #e6e6e6;
@@ -731,7 +729,7 @@ h1::before {
     border-top-color: #002d61
 }
 
-/*! —» Enhancement: WDS Link Elements → Heading/hX-style «— */
+/*! —» Customization: Link WDS Elements → Presentation option: Heading/hX-style presentation «— */
 
 .hx-style-link:not(:hover) {
   color: inherit;
@@ -751,14 +749,14 @@ h1::before {
   text-decoration: none;
 }
 
-/*! —» Enhancement: WDS Heading Element → Heading tail text «— */
+/*! —» Enhancement: Heading WDS Elements → Presentation option: Heading tail text «— */
 
 .hX-tail-text {
   display: block;
   font-size: 1rem;
 }
 
-/*! —» Enhancement: WDS Column Components → Full-bleed row design «— */
+/*! —» Customization: Column WDS Components → Presentation option: Full-bleed row design «— */
 
 .wsu-row.wsu-row--full-bleed:after {
   bottom: 0;
@@ -773,7 +771,7 @@ h1::before {
   z-index: 1;
 }
 
-/*! —» Enhancement: WDS Column Components → Full-bleed row coloring «— */
+/*! —» Enhancement: Column WDS Components → Full-bleed row coloring «— */
 
 .wsu-wrapper-site .wsu-row.wsu-row--full-bleed:after {
   margin-left: calc((100vw - 100%)/ -2);
@@ -819,7 +817,7 @@ h1::before {
   background-color: #080808;
 }
 
-/*! —» Enhancement: WDS Hero Banner Modules → Overall presentation «— */
+/*! —» Enhancement: Hero Banner WDS Modules → Overall presentation «— */
 
 .wsu-hero:not([class*="-hero--style-"]) .wsu-title,
 .wsu-hero:not([class*="-hero--style-"]) .wsu-caption {
@@ -833,7 +831,7 @@ h1::before {
   line-height: 1.25;
 }
 
-/*! —» Enhancement: WDS Hero Banner Modules → Design variants «— */
+/*! —» Enhancement: Hero Banner WDS Modules → Presentation options: Design variants «— */
 
 .wsu-hero--hide-tail {
   overflow-y: hidden;
@@ -859,7 +857,7 @@ h1::before {
   clip-path: polygon(100% 0, 100% 100%, 80px 100%, 0 calc(100% - 100px), 0 0);
 }
 
-/*! —» Enhancement: WDS Accordion Components → Improved interaction reactivity «— */
+/*! —» Enhancement: Accordion WDS Components → Responsive design: Improved interaction reactivity «— */
 
 .wsu-accordion__content {
   border-left: 1px solid transparent;
@@ -870,7 +868,7 @@ h1::before {
   border-color: #ccc;
 }
 
-/*! —» Enhancement: WDS Accordion Components → Typograhic title variants «— */
+/*! —» Customization: Accordion WDS Components → Presentation options: Typographic title variants «— */
 
 .wsu-accordion--semi-bold-title .wsu-accordion__title-button {
   font-weight: 600;
@@ -880,7 +878,7 @@ h1::before {
   font-weight: 700;
 }
 
-/*! —» Enhancement: WDS Icon Components → Design variants «— */
+/*! —» Enhancement: Icon WDS Components → Design variants «— */
 
 .wsu-i-arrow-right--offsite {
   margin-right: 0;
@@ -901,14 +899,14 @@ h1::before {
   }
 }
 
-/*! —» Enhancement: WDS Image Components → Design variants «— */
+/*! —» Enhancement: Image WDS Components → Design variants «— */
 
 .wp-block-image.img--capped-resize img {
   max-width: attr(width);
   max-width: attr(width px);
 }
 
-/*! —» Enhancement: WDS Separator Component → Design variants «— */
+/*! —» Enhancement: Separator WDS Components → Sharper presentation «— */
 
 hr:not([class*=separator--style-]) {
   background-color: #f7f7f7;
@@ -918,11 +916,13 @@ hr:not([class*=separator--style-]) {
   margin: 3.125rem 0;
 }
 
+/*! —» Customization: Separator WDS Components → Presentation options: Subtle design variant «— */
+
 .wsu-separator--subtle {
   border: 1px solid #e7e7e7 !important;
 }
 
-/*! —» Enhancement: WDS Row Components → Fixed height rows «— */
+/*! —» Customization: Row WDS Sub-components → Fixed height rows «— */
 
 @media all and (min-width: 861px) {
   .wsu-row-fixed-h {
@@ -996,14 +996,14 @@ hr:not([class*=separator--style-]) {
   }
 }
 
-/*! —» WDS Enhancement: Block tables → Default styling «— */
+/*! —» Enhancement: Block Table WDS Components → Better default styling «— */
 
 .wp-block-table th {
   background-color: #f0f0f0;
   text-align: left;
 }
 
-/*! —» Enhancement: WDS Decorator Components → Background art «— */
+/*! —» Customization: Decorator WDS Components → Presentation options: Background art variations «— */
 
 .wsu-decorator--bg-zigzag-gray {
   background:
@@ -1055,7 +1055,7 @@ hr:not([class*=separator--style-]) {
     linear-gradient(155deg, #303030 10px, transparent 10px);
 }
 
-/*! —» Enhancement: WDS General Components → Background art «— */
+/*! —» Customization: General WDS Components → Presentation options: Background art variations «— */
 
 .wsu-background--style-wsu-crimson.wsu-background--style-no-pattern {
   background-image: radial-gradient(ellipse at center,#ca1237 0,#78001e 100%);
@@ -1070,7 +1070,7 @@ hr:not([class*=separator--style-]) {
   background-position: center center;
 }
 
-/*! —» Enhancement: WDS Sticky Nav Module → "On this page" design variant «— */
+/*! —» Customization: Sticky Nav WDS Modules → Presentation option: "On this page" design variant «— */
 
 .wsu-section--on-this-page {
   border-bottom: 2px solid #f0f0f0;
@@ -1239,7 +1239,7 @@ hr:not([class*=separator--style-]) {
   }
 }
 
-/*! —» Enhancement: WDS Sticky Nav Module → Minimalist "on this page" design variant «— */
+/*! —» Enhancement: Sticky Nav WDS Module → Minimalist "on this page" design variant «— */
 
 .wsu-section--on-this-page.wsu-section--minimalist-on-this-page {
   background-color: transparent;
@@ -1293,7 +1293,7 @@ hr:not([class*=separator--style-]) {
   }
 }
 
-/*! —» Customization: Container-based modifications → Typographic weight «— */
+/*! —» Customization: WordPress Gutenberg Blocks → Container-based presentation modifications: Typographic weights «— */
 
 .block-with-eb-strongs strong {
   font-weight: 800;
