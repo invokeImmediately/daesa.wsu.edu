@@ -12,7 +12,7 @@
  *  unique to DAESA branded websites.
  * Atomic CSS = Custom utility classes.
  * ---------------------------------------
- * @version 0.12.1
+ * @version 0.12.2
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -1423,4 +1423,16 @@ hr:not([class*=separator--style-]) {
 
 .wsu-spacing-margin-bottom--ssxsmall {
   margin-bottom: .25rem!important;
+}
+
+.wsu-spacing-margin-left--ssxsmall {
+  margin-left: .25rem!important;
+}
+
+.wsu-spacing-margin-right--ssxsmall {
+  margin-right: .25rem!important;
+}
+
+.wsu-spacing-margin-top--ssxsmall {
+  margin-top: .25rem!important;
 }
