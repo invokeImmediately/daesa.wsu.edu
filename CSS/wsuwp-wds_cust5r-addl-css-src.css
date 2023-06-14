@@ -16,7 +16,7 @@
  *  branded WSU websites.
  * Atomic CSS = Custom utility classes.
  * ---------------------------------------
- * @version 0.13.1
+ * @version 0.13.2
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -726,8 +726,8 @@ nav.wsu-sticky-nav--style-crimson {
     -1px -1px 1px #000;
 }
 
-.page .wsu-hero:not([class*="-hero--style-"]) .wsu-title {
-  font-size: 2.75rem;
+.page .wsu-hero:not([class*="-hero--style-"]).wsu-hero--smaller-title .wsu-title {
+  font-size: 3.125rem;
   line-height: 1.25;
 }
 
