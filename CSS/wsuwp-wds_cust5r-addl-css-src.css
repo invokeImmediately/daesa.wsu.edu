@@ -8,11 +8,15 @@
  * ---------------------------------------
  * Issue Fixes = Improvements to and
  *  corrections of upstream stylesheets.
- * Enhancements = Customized styling
- *  unique to DAESA branded websites.
+ * Enhancements = Tweaks to default
+ *  layout and/or presentation of WDS
+ *  elements, components, and modules.
+ * Customizations = Customized styling
+ *  uniquely available on DAESA sub-
+ *  branded WSU websites.
  * Atomic CSS = Custom utility classes.
  * ---------------------------------------
- * @version 0.12.2
+ * @version 0.13.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -75,7 +79,6 @@ body {
     font-size: .9375rem!important;
   }
 }
-
 
 /*! —» Issue fix: WDS Websites → Responsive Design: Compensate for width-changing effects of classic scrollbars «— */
 
@@ -464,8 +467,10 @@ nav.wsu-sticky-nav--style-crimson {
 
 /*! —» Issue Fix: Tribe Events Calendar Plugin Block Assemblies → Overall presentation «— */
 
-#tribe-events {
-  padding-top: 0;
+#tribe-events,
+.tribe-events-view .tribe-common-l-container.tribe-events-l-container
+{
+  padding-top: 0!important;
 }
 
 .wsu-article-header__title:empty {
@@ -508,6 +513,14 @@ nav.wsu-sticky-nav--style-crimson {
   left: 0;
   top: 48%;
   transform: translateY(-50%);
+}
+
+.tribe-events .tribe-events-calendar-latest-past__event-title-link:active, .tribe-events .tribe-events-calendar-latest-past__event-title-link:focus, .tribe-events .tribe-events-calendar-latest-past__event-title-link:hover {
+  border-color: transparent!important;
+}
+
+.tribe-common .tribe-common-anchor-thin:active, .tribe-common .tribe-common-anchor-thin:focus, .tribe-common .tribe-common-anchor-thin:hover {
+  border-color: transparent!important;
 }
 
 /*! —» Issue Fix: News Page Block Assemblies → Overall presentation «— */
@@ -618,14 +631,20 @@ nav.wsu-sticky-nav--style-crimson {
   display: none;
 }
 
-.home h1 {
+.home h1.daesa-smaller-home-h1 {
   font-size: 2.75rem;
 }
 
 @media screen and (max-width: 768px) {
-  .home h1 {
+  .home h1.daesa-smaller-home-h1 {
     font-size: 2rem;
   }
+}
+
+.daesa-hx-tail-text {
+  display: block;
+  font-size: .5em;
+  margin-top: .5rem;
 }
 
 /*! —» Enhancement: Site Header WDS Modules → Coloring «— */
