@@ -16,7 +16,7 @@
  *  branded WSU websites.
  * Atomic CSS = Custom utility classes.
  * ---------------------------------------
- * @version 0.13.2
+ * @version 0.14.0
  * @author Daniel Rieck
  *  [daniel.rieck@wsu.edu]
  *  (https://github.com/invokeImmediately)
@@ -666,7 +666,7 @@ nav.wsu-sticky-nav--style-crimson {
 
 /*! —» Enhancement: Heading WDS Elements → Presentation option: Heading tail text «— */
 
-.hX-tail-text {
+.hx-tail-text {
   display: block;
   font-size: 1rem;
 }
@@ -1316,6 +1316,20 @@ h1::before {
   .wsu-section--on-this-page.wsu-section--minimalist-on-this-page.wsu-section--left-aligned-on-this-page .wsu-anchor-menu > li:first-child {
     margin-left: -2rem;
   }
+}
+
+/*! —» Customization: WordPress Gutenberg Blocks → Container-based presentation modifications: Intro text «— */
+
+.block-intro-text {
+  font-size: 1.3125em;
+}
+
+.block-intro-text--display-as-block {
+  display: block;
+}
+
+.block-intro-text--display-as-inline-block {
+  display: inline-block;
 }
 
 /*! —» Customization: WordPress Gutenberg Blocks → Container-based presentation modifications: Typographic weights «— */
